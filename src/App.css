@@ -47,11 +47,13 @@
   }
   .header-bot__btn {
     min-width: 100%;
+    background: url(./assets/Icons/upload.svg) no-repeat scroll 0.5rem 0.5rem;
     height: 2.5rem;
     border: none;
     border-radius: 0.25rem;
     background-color: #0095FF;
     color: #FFFFFF;
+    padding-left: 2.25rem;
   }
   .header-bot__btn:hover {
     background-color: #0065AD;
