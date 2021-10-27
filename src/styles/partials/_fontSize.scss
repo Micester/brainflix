@@ -1,1 +1,48 @@
 //Mobile font styles
+// @font-face {
+//     font-family:  "Avenir-Regular"; //Regular Font
+//     src: url("/src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff");
+// }
+
+// 
+// @font-face {
+//     font-family: "Avenir-Bold"; //Bold Font 
+//     src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+//     font-weight: bold; //700
+// }
+
+//Section Header
+@font-face {
+    font-family: "Avenir-Header"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+    font-weight: bold; //700
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+//Sub Header
+@font-face {
+    font-family: "Avenir-Sub-Head"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+    font-weight: bold; //700
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+//Body Copy
+@font-face {
+    font-family: "Avenir-Body"; //Regular Font
+    src: url("/src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff");
+    font-weight: 400; //Regular
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+//Labels & Buttons 
+@font-face {
+    font-family: "Avenir-Button"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+    font-weight: 700; //700
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}

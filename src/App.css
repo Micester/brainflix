@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "Avenir-Header";
+  src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+@font-face {
+  font-family: "Avenir-Sub-Head";
+  src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+  font-weight: bold;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@font-face {
+  font-family: "Avenir-Body";
+  src: url("/src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff");
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@font-face {
+  font-family: "Avenir-Button";
+  src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
 @media screen and (min-width: 320px) {
   .header {
     display: flex;
@@ -15,9 +43,9 @@
     align-items: center;
     width: 100%;
     padding: 0.75rem;
-    margin: 0.75rem;
   }
   .header-mid__search {
+    font-family: "Avenir-Button";
     width: 15rem;
     max-width: 100%;
     height: 1rem;
@@ -26,6 +54,7 @@
     border: 1px solid #E1E1E1;
     margin-right: 0.75rem;
     background: url(./assets/Icons/search.svg) no-repeat scroll 0.65rem 0.65rem;
+    background-color: #FAFAFA;
     padding-left: 2.25rem;
   }
   .header-mid__search:active {
@@ -46,6 +75,7 @@
     width: 100%;
   }
   .header-bot__btn {
+    font-family: "Avenir-Button";
     min-width: 100%;
     background: url(./assets/Icons/upload.svg) no-repeat scroll 0.5rem 0.5rem;
     height: 2.5rem;
@@ -53,7 +83,6 @@
     border-radius: 0.25rem;
     background-color: #0095FF;
     color: #FFFFFF;
-    padding-left: 2.25rem;
   }
   .header-bot__btn:hover {
     background-color: #0065AD;
