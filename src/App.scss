@@ -1,6 +1,6 @@
 @use './styles/partials/partials' as *;
 @use './styles/partials/mixins' as *;
-@use './styles/partials//fontSize' as *;
+@use './styles/partials/fontSize' as *;
 
 // Variables
 $mobile-width: 320px;
@@ -31,7 +31,7 @@ $Alabaster: #FAFAFA; //Form Field background color.
        }
        &-mid{ // Search-bar Div
            display: flex;
-           align-items: center;
+           align-items: flex-end;
            width: 100%;
            padding: 0.75rem;
        }
