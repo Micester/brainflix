@@ -7,9 +7,11 @@ $tablet-width: 768px;
 $desktop-width: 1280px;
 
 //Primary Colors 
-$BrainFlix-Blue: #0095FF;
+$BrainFlix-Blue: #0095FF; //primary CTA color
+$white: #FFFFFF;
 //Secondary Colors
 $Mercury: #E1E1E1;
+$BrainFlix-DarkBlue: #0065AD; //CTA hover state
 
 // Header
 .header {
@@ -19,26 +21,40 @@ $Mercury: #E1E1E1;
         align-items: center;
         flex-direction: column;
         padding: 1rem;
-        width: 100%;
-        
-       &-mid{
+        max-width: 100%;
+       &-top__logo{
+           max-height: 1.5625rem;
+           max-width: 7.5rem;
+       }
+       &-mid{ // Search-bar Div
            display: flex;
            align-items: center;
            width: 100%;
+           padding: 0.75rem;
+           margin: 0.75rem;
        }
        &-mid__search{ //Header Search-bar
-           min-width: 15rem; 
+           width: 15rem;
            max-width: 100%;
            height: 1rem;
            border-radius: 0.25rem;
            padding: 0.75rem;
-           margin: 0.75rem;
            border: 1px solid $Mercury;
+           margin-right: 0.75rem;
            
-
-           &:active{
+           background: url(./assets/Icons/search.svg) no-repeat scroll 0.65rem 0.65rem;
+           padding-left: 2.25rem;
+           &:active{ // Active currently does nothing !!!
             border: 2px solid $BrainFlix-Blue;
-        }
+           }
+
+           &:hover{ //Hover makes the border blue but reverts to a orange
+            border: 2px solid $BrainFlix-Blue;
+           }
+
+           &:invalid{ // Does not work !!!
+            border: 1px solid #D22D2D;
+           }
        } 
        
        &-mid__avatar{ //Avatar-Logo
@@ -50,7 +66,16 @@ $Mercury: #E1E1E1;
            width: 100%;
        }
        &-bot__btn{ //Upload-Button
-           width: 100%;
+           min-width: 100%;
+           height: 2.5rem;
+           border: none;
+           border-radius: 0.25rem;
+           background-color: $BrainFlix-Blue;
+           color: $white;
+
+           &:hover{
+               background-color: $BrainFlix-DarkBlue;
+           }
        }
     }
 }
