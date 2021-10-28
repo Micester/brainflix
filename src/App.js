@@ -12,15 +12,36 @@ import VideoSrc from './data/videos.json'; //Video
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 // import VideoSrc from './data/data';
 
-function App() {
-  return (
-    <>
-      <Header logo={logoSrc} avatar={avatarSrc}/>
-      <VideoPlayer Video={VideoSrc}/>
+//Importing video-details and putting into array
+import VideoArrayDetails from './data/video-details.json'
 
 
-    </>
-  );
+
+class App extends React.Component {
+  //Videos Array
+  state = {
+
+    ActiveVideo: VideoArrayDetails[0],
+    Videos: VideoArrayDetails,
+  }
+
+  updateActiveVideo = (id) => {
+    const foundVideoId = this.state.Videos.findIndex((Vidoes)=> id === Vidoes.id);
+    this.setState({
+    ActiveVideo: this.state.Videos[foundVideoId]
+    })
+  }
+
+  render(){
+    return (
+      <>
+        <Header logo={logoSrc} avatar={avatarSrc}/>
+        <VideoPlayer Video={VideoSrc}/>
+  
+  
+      </>
+    );
+  }
 }
 
 export default App;
