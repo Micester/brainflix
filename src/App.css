@@ -94,4 +94,19 @@
   .header-bot__btn:hover {
     background-color: #0065AD;
   }
+}
+
+@media screen and (min-width: 320px) {
+  .Hero-top__Image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .Hero-about {
+    padding: 1rem;
+  }
+  .Hero-about__channelTime {
+    display: flex;
+    justify-content: flex-start;
+  }
 }/*# sourceMappingURL=App.css.map */

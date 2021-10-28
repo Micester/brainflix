@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-//Header Stuff
+//Header
 import Header from './components/Header/Header';
 import logoSrc from './assets/Logo/BrainFlix-logo.svg';
 import avatarSrc from './assets/Images/Mohan-muruge.jpg';
@@ -17,9 +17,12 @@ console.log(videoDetails);
 class App extends React.Component {
   //Videos Array
   state = {
-    ActiveVideo: videoDetails[0],
+    ActiveVideo: videoDetails,
     albums: videoDetails,
+    ActiveInfo: videoDetails,
+    ActiveComments: videoDetails,
   };
+
 
   updateActiveVideo = (id) => {
     const foundVideoId = this.state.albums.findIndex((album)=> id === album.id);
@@ -35,8 +38,7 @@ class App extends React.Component {
         <VideoList albums={this.state.albums}
         updateActiveVideo={this.updateActiveVideo}/>
   
-      
-  
+     
   
       </>
     );

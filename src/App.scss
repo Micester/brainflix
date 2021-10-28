@@ -25,7 +25,7 @@ $Alabaster: #FAFAFA; //Form Field background color.
         flex-direction: column;
         padding: 1rem;
         max-width: 100%;
-       &-top__logo{
+       &-top__logo{ //BrainFlix Logo
            max-height: 1.5625rem;
            max-width: 7.5rem;
        }
@@ -85,5 +85,27 @@ $Alabaster: #FAFAFA; //Form Field background color.
                
            }
        }
+    }
+}
+
+//Hero Image
+.Hero {
+    @include mobile{
+        // display: flex;
+        // align-items: center;
+        // position: relative;
+      
+        &-top__Image{
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+        &-about{
+            padding: 1rem;
+        }
+        &-about__channelTime{
+            display: flex;
+            justify-content: flex-start;
+        }
     }
 }
