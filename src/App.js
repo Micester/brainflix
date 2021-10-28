@@ -6,37 +6,36 @@ import Header from './components/Header/Header';
 import logoSrc from './assets/Logo/BrainFlix-logo.svg';
 import avatarSrc from './assets/Images/Mohan-muruge.jpg';
 
-//Video Player
-import VideoSrc from './data/videos.json'; //Video 
-// import VidoeDetails from './data/video-details.json'; //Video-Details
-import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-// import VideoSrc from './data/data';
 
-//Importing video-details and putting into array
-import VideoArrayDetails from './data/video-details.json'
+//Video Player Test
+import videoDetails from './data/video-details.json';// Import video-detail data
+import VideoList from './components/VideoPlayer/VideoPlayerList';
 
 
+console.log(videoDetails);
 
 class App extends React.Component {
   //Videos Array
   state = {
-
-    ActiveVideo: VideoArrayDetails[0],
-    Videos: VideoArrayDetails,
-  }
+    ActiveVideo: videoDetails[0],
+    albums: videoDetails,
+  };
 
   updateActiveVideo = (id) => {
-    const foundVideoId = this.state.Videos.findIndex((Vidoes)=> id === Vidoes.id);
+    const foundVideoId = this.state.albums.findIndex((album)=> id === album.id);
     this.setState({
-    ActiveVideo: this.state.Videos[foundVideoId]
-    })
-  }
+    ActiveVideo: this.state.albums[foundVideoId]
+    });
+  };
 
   render(){
     return (
       <>
         <Header logo={logoSrc} avatar={avatarSrc}/>
-        <VideoPlayer Video={VideoSrc}/>
+        <VideoList albums={this.state.albums}
+        updateActiveVideo={this.updateActiveVideo}/>
+  
+      
   
   
       </>

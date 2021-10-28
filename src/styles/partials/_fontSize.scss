@@ -11,9 +11,18 @@
 //     font-weight: bold; //700
 // }
 
+//Page Header
+@font-face {
+    font-family: "Avenir-Page-Header"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+    font-weight: bold; //700
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
 //Section Header
 @font-face {
-    font-family: "Avenir-Header"; //Bold Font 
+    font-family: "Avenir-Section-Header"; //Bold Font 
     src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
     font-weight: bold; //700
     font-size: 0.75rem;
