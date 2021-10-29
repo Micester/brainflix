@@ -158,7 +158,8 @@
 
 @media screen and (min-width: 320px) {
   .Comments {
-    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
   .Comments__num {
     font-family: "Avenir-Sub-Head";
@@ -193,6 +194,7 @@
     border: 1px solid #E1E1E1;
     margin-bottom: 0.75rem;
     background-color: #FAFAFA;
+    color: #323232;
   }
   .Comments__AddComment__Right__Search:active {
     border: 2px solid #0095FF;
@@ -271,9 +273,12 @@
   }
   .NextVideos-Lists-Click-Right__Name {
     margin: 0;
+    font-family: "Avenir-Sub-Head";
   }
   .NextVideos-Lists-Click-Right__Channel {
     margin: 0;
+    font-family: "Avenir-Body";
+    color: #323232;
   }
   .NextVideos-Lists-Click-Left {
     width: 40%;

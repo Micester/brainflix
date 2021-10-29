@@ -185,7 +185,9 @@ $Alabaster: #FAFAFA; //Form Field background color.
 
     //Mobile - Comments
     @include mobile {
-        padding: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+
 
         &__num{//# of Comments 
             font-family: "Avenir-Sub-Head";
@@ -223,6 +225,7 @@ $Alabaster: #FAFAFA; //Form Field background color.
             border: 1px solid $Mercury;
             margin-bottom: 0.75rem;
             background-color: $Alabaster;
+            color: $BrainFlix-Black;
 
             &:active{ // Active currently does nothing !!!
              border: 2px solid $BrainFlix-Blue;
@@ -314,9 +317,13 @@ $Alabaster: #FAFAFA; //Form Field background color.
         }
         &-Lists-Click-Right__Name{ //Right Container - name
             margin: 0;
+            font-family: "Avenir-Sub-Head";
+         
         }
         &-Lists-Click-Right__Channel{//Right Container - channel
             margin: 0;
+            font-family: "Avenir-Body";
+            color:$BrainFlix-Black;
         }
         &-Lists-Click-Left{ //Left Container 
             width: 40%;
