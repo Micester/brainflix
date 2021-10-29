@@ -1,4 +1,3 @@
-//Hero Image Under Header
 const VideoPlayer = (props) => {
   console.log('video props', props.image);
 

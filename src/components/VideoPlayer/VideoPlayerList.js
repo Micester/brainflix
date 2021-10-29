@@ -2,8 +2,8 @@
 function VideoList(props) {
     console.log('VideoList props', props)
 
-    const HeroImg = props.albums[0].image;
-    const HeroTitle = props.albums[0].title;
+    // const HeroImg = props.albums[0].image;
+    // const HeroTitle = props.albums[0].title;
     const HeroChannel = props.albums[0].channel;
     const timestamp = props.albums[0].timestamp;
     const description = props.albums[0].description;
@@ -14,26 +14,16 @@ function VideoList(props) {
 
     return(
         <div className="Hero">
-          {/* Render HeroImg */}
-          <div className="Hero-top">
-            <img className="Hero-top__Image" src={HeroImg} alt="Hero-Img"/>
-          </div>
-
+         
           {/* About HeroImg Section */}
           <section className="Hero-about">
-            <div className="Hero-about__title">
-              <h1 className="Hero-about__title__text">{HeroTitle}</h1>
-            </div>
-
-         
-            {/* About HeroImg Channel/Date */}
+       
             <div className="Hero-about__channelTime"> 
               <div className="Hero-about__channelViews">
                 <p className="Hero-about__channelViews__text">By {HeroChannel}</p>
                 <p className="Hero-about__channelViews__timestamp">{timestamp}</p>
               </div>
 
-              {/* About HeroImg Likes/Views */}
               <div className="Hero-about__channelViews">
                 <p className="Hero-about__channelViews__views">{views}</p>
                 <p className="Hero-about__channelViews__likes">{likes}</p>
@@ -42,11 +32,11 @@ function VideoList(props) {
 
             {/* About HeroImg Description */}
             <div className="Hero-about__description">
-            <p className="Hero-bottom__description">{description}</p>
+              <p className="Hero-bottom__description">{description}</p>
             </div>
 
             <section className="Hero-Comments">
-            <div className="Hero-Comments__numOfComments">{numOfComments} Comments</div>
+              <div className="Hero-Comments__numOfComments">{numOfComments} Comments</div>
             </section>
 
           </section>

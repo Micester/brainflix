@@ -95,17 +95,13 @@ $Alabaster: #FAFAFA; //Form Field background color.
         // align-items: center;
         // position: relative;
       
-        &-top__Image{
+        &-Image{
         width: 100%;
         height: auto;
         display: block;
         }
         &-about{
             padding: 1rem;
-        }
-        &-about__channelTime{
-            display: flex;
-            justify-content: flex-start;
         }
     }
 }
