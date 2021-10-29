@@ -7,15 +7,15 @@ const Author = (props) => {
     const likes = props.AuthorList[0].likes;
 
     return(
-        <section className="Hero-about-Author">
-              <div className="Hero-about-Author__stats">
-                <p className="Hero-about-Author__stats__text">By {HeroChannel}</p>
-                <p className="Hero-about-Author__stats__timestamp">{timestamp}</p>
+        <section className="About-Author">
+              <div className="About-Author__stats">
+                <p className="About-Author__stats__text">By {HeroChannel}</p>
+                <p className="About-Author__stats__timestamp">{timestamp}</p>
               </div>
 
-              <div className="Hero-about-Author__stats">
-                <p className="Hero-about-Author__stats__views">{views}</p>
-                <p className="Hero-about-Author__stats__likes">{likes}</p>
+              <div className="About-Author__stats">
+                <p className="About-Author__stats__views">{views}</p>
+                <p className="About-Author__stats__likes">{likes}</p>
               </div>
         </section>
     )

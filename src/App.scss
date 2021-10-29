@@ -10,6 +10,8 @@ $desktop-width: 1280px;
 //Primary Colors 
 $BrainFlix-Blue: #0095FF; //primary CTA color
 $white: #FFFFFF;
+$BrainFlix-Black: #323232; //Primary Text color
+$Silver: #AFAFAF; //Secondary Text color
 //Secondary Colors
 $Mercury: #E1E1E1;
 $BrainFlix-DarkBlue: #0065AD; //CTA hover state
@@ -18,7 +20,6 @@ $Alabaster: #FAFAFA; //Form Field background color.
 // Header
 .header {
     //Mobile - Header 
-    
     @include mobile{
         display: flex;
         align-items: center;
@@ -88,6 +89,24 @@ $Alabaster: #FAFAFA; //Form Field background color.
     }
 }
 
+// // Button 
+// .Button{
+//         //Button
+//         font-family: "Avenir-Button";
+//         min-width: 100%;
+//         height: 2.5rem;
+//         border: none;
+//         border-radius: 0.25rem;
+//         background-color: $BrainFlix-Blue;
+//         color: $white;
+     
+//         &:hover{
+//             background-color: $BrainFlix-DarkBlue;
+            
+//         }
+    
+// }
+
 //Hero Image
 .Hero {
     @include mobile{
@@ -96,9 +115,9 @@ $Alabaster: #FAFAFA; //Form Field background color.
         // position: relative;
       
         &-Image{
-        width: 100%;
-        height: auto;
-        display: block;
+            width: 100%;
+            height: auto;
+            display: block;
         }
         &-about{
             padding: 1rem;
@@ -106,3 +125,209 @@ $Alabaster: #FAFAFA; //Form Field background color.
     }
 }
 
+//About Video (Under Hero Image) States,views,likes, etc.
+.About {
+    
+    //Mobile - About 
+    @include mobile{
+        padding: 1rem;
+        padding-top: 1.5rem;
+
+        &-Title{
+            font-family: "Avenir-Page-Header";
+            font-size: 1.3rem;
+        }
+        &__Title__text{
+            margin: 0;
+        }
+        &-Author{
+            display: flex;
+            padding-top: 1rem;
+        }
+        &-Author__stats{ //Video States,views,likes, etc.
+            width: 50%;
+            font-family: "Avenir-Body";
+            color: $Silver;
+        }
+        &-Author__stats__text{ //Video Title
+            font-family: "Avenir-Section-Header";
+            color: $BrainFlix-Black;
+            margin: 0;
+            padding-bottom: 1rem;
+        }
+        &-Author__stats__timestamp{ //Video Date
+            font-family: "Avenir-Body";
+            color: $Silver;
+            margin: 0;
+
+        }
+        &-Author__stats__views{ //Video Views
+            background: url(./assets/Icons/views.svg) no-repeat scroll;
+            padding-left: 1.75rem;
+            margin: 0;
+            padding-bottom: 1rem;
+            
+        }
+        &-Author__stats__likes{//Video Likes
+            background: url(./assets/Icons/likes.svg) no-repeat scroll;
+            padding-left: 1.75rem; 
+            margin: 0;
+        }
+        &-Desc{ //Video Description
+            font-family: "Avenir-Body";
+            color: $BrainFlix-Black;
+        }
+    }
+}
+
+//Comments 
+.Comments{
+
+    //Mobile - Comments
+    @include mobile {
+        padding: 1rem;
+
+        &__num{//# of Comments 
+            font-family: "Avenir-Sub-Head";
+        }
+        //Add Comment
+        &__AddComment{
+            display: flex;
+            padding-top: 1.5rem;
+        }
+        &__AddComment__Right{
+            width: 100%;
+        }
+        &__AddComment__Left{
+            padding-top: 1.25rem;
+        }
+        //Avatar Left Box
+        &__AddComment__Left__avatar{
+            border-radius: 50%;
+            width: 2.25rem;
+            height: 2.25rem;
+            margin-right: 0.75rem;
+        }
+        //Comment Box
+        &__AddComment__Right__title{
+            margin: 0;
+            color: $Silver;
+            font-family: "Avenir-Body";
+        }
+        &__AddComment__Right__Search{
+            font-family: "Avenir-Button";
+            min-width: 90%;
+            border-radius: 0.25rem;
+            padding: 0.75rem;
+            padding-bottom: 4rem;
+            border: 1px solid $Mercury;
+            margin-bottom: 0.75rem;
+            background-color: $Alabaster;
+
+            &:active{ // Active currently does nothing !!!
+             border: 2px solid $BrainFlix-Blue;
+            }
+            &:hover{ //Hover makes the border blue but reverts to a orange
+             border: 2px solid $BrainFlix-Blue;
+            }
+            &:invalid{ // Does not work !!!
+             border: 1px solid #D22D2D;
+            }
+        }  
+        
+        //Comment Button
+        &__AddComment__Right__btn{
+            font-family: "Avenir-Button";
+            background: url(./assets/Icons/add_comment.svg) no-repeat scroll 0.50rem 0.50rem;
+            min-width: 100%;
+            height: 2.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            background-color: $BrainFlix-Blue;
+            color: $white;
+
+            &:hover{
+                background-color: $BrainFlix-DarkBlue;
+                
+            } 
+        }
+    }
+}
+
+.PrevComments{
+    @include mobile{
+        &-box-NTC{ 
+            display: flex;
+            padding-top: 1rem;
+        }
+        &-box-NTC-Right__name{ //Comment name
+            font-family: "Avenir-Sub-Head";
+            margin: 0;
+        }
+        &-box-NTC__timestampe{ //Comment date
+            color: $Silver;
+            font-family: "Avenir-Body";
+        }
+        &-box-NTC__comment{ //Comment text
+            font-family: "Avenir-Body";
+            color: $BrainFlix-Black;
+            margin: 0;
+        }
+        &-box-NTC-Left__Avatar{ //Comments Avatars
+            margin-right: 0.75rem;
+            padding-top: 1rem;
+        }
+        &-box-NTC-Right-Container{ //put Name & Date onto same row
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
+// NextVideos 
+.NextVideos {
+    //Mobile - NextVideos
+    @include mobile{
+        &-title{
+            padding: 1rem;
+            padding-bottom: 1.5rem;
+            margin: 0;
+            color: $Silver;
+            font-family: "Avenir-Body"; 
+            font-weight: bold;
+        }
+        &-Lists{ //List of Videos 
+            margin: 0;
+            padding: 1rem;
+            padding-top: 0;
+        }
+        &-Lists-Click{ //Once Clicked function
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+        }
+        &-Lists-Click-Right{ //Right Container
+            width: 60%;
+        }
+        &-Lists-Click-Right__Name{ //Right Container - name
+            margin: 0;
+        }
+        &-Lists-Click-Right__Channel{//Right Container - channel
+            margin: 0;
+        }
+        &-Lists-Click-Left{ //Left Container 
+            width: 40%;
+            padding-right: 1rem;
+        }
+        &-Lists-Click-Left__img{ //Left Container images
+            border-radius: 0.25rem;
+            width: 100%;
+            height: 4rem;
+            display: block;
+            background-size: contain;
+        }
+    }
+}

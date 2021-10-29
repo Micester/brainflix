@@ -8,22 +8,24 @@ class NextVideos extends Component {
     render() {
         return(
             <>
-                <ul className="Hero-NextVideos-List">
+             <p className="NextVideos-title">NEXT VIDEOS</p>
+                {/* <ul className="NextVideos-Lists"> */}
                     {this.props.videos
                     .filter((videos) => videos.id !== '2')
-                    .map((videos) => {
-                        return (    
-                        <ul key={videos.id}>
-                            <VideoPlayer 
-                            title={videos.title} 
-                            image={videos.image} 
-                            channel={videos.channel} />
-                        </ul>
+                        .map((videos) => {
+                            return (    
+                    
+                                    <ul className="NextVideos-Lists" key={videos.id}>
+                                        <VideoPlayer 
+                                        title={videos.title} 
+                                        image={videos.image} 
+                                        channel={videos.channel} />
+                                    </ul>
+                              
                         );
                     })}
-                </ul> 
+                {/* </ul>  */}
             </>
-            
         );
     }
 }

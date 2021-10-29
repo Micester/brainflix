@@ -7,9 +7,9 @@ const Title = (props) => {
 
     return(
       
-        <section className="Hero-about-Title">
+        <section className="About-Title">
   
-            <h1 className="Hero-about__title__text">{HeroTitle}</h1>
+            <h1 className="About__Title__text">{HeroTitle}</h1>
          
         </section>
    

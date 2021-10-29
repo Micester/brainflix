@@ -91,20 +91,20 @@ class App extends React.Component {
         <Hero HeroList={this.state.HeroList}/> 
         
         {/* Title/Author/Description/Comments */}
-        <section className="Hero-about">
+        <section className="About">
           <Title TitleList={this.state.TitleList}/>
           <Author AuthorList={this.state.AuthorList}/>
           <Desc DescList={this.state.DescList}/>
       
         </section>
-        <section className="Hero-Comments">
+        <section className="Comments">
            <Comments CommentsList={this.state.CommentsList}/>
            <AddComments avatar={avatarSrc}/>
            <PrevComments avatar={avatarSrc} 
             PrevCommentsList={this.state.PrevCommentsList}/>
         </section>
 
-        <section className="Hero-NextVideos">
+        <section className="NextVideos">
           {/* <NextVideos /> */}
           <NextVideos videos={this.state.videos}
           updateActiveVideo={this.updateActiveVideo}

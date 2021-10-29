@@ -4,8 +4,8 @@ const Desc = (props) => {
     
     // Hero-Description Text
     return(
-        <section className="Hero-about-Desc">
-            <p className="Hero-about-Desc__text">{description}</p>
+        <section className="About-Desc">
+            <p className="About-Desc__text">{description}</p>
         </section>
    
    

@@ -27,9 +27,11 @@ const PrevComments = (props) => {
                 
                 {/* Comment/name/Timestamp */}
                     <div className="PrevComments-box-NTC-Right">
-                        <p className="PrevComments-box-NTC-Right__name">{PrevCommentsName}</p>
-                        <p className="PrevComments-box-NTC-Right__timestampe">{PrevCommentsTimestamp}</p>
-                        <p className="PrevComments-box-NTC-Right__comment">{PrevCommentsText}</p>
+                        <div className="PrevComments-box-NTC-Right-Container">
+                            <p className="PrevComments-box-NTC-Right__name">{PrevCommentsName}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp}</p>
+                        </div>
+                        <p className="PrevComments-box-NTC__comment">{PrevCommentsText}</p>
                     </div>
                 </div>
 
@@ -38,8 +40,10 @@ const PrevComments = (props) => {
                         <div className="PrevComments-box-NTC-Left__Avatar"><img className="header-mid__avatar" src={props.avatar} alt ="avatar"/></div>
                     </div>
                     <div className="PrevComments-box-NTC-Right">
-                        <p className="PrevComments-box-NTC__name">{PrevCommentsName1}</p>
-                        <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp1}</p>
+                        <div className="PrevComments-box-NTC-Right-Container">
+                            <p className="PrevComments-box-NTC-Right__name">{PrevCommentsName1}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp1}</p>
+                        </div>
                         <p className="PrevComments-box-NTC__comment">{PrevCommentsText1}</p>
                     </div>
                 </div>
@@ -49,8 +53,10 @@ const PrevComments = (props) => {
                         <div className="PrevComments-box-NTC-Left__Avatar"><img className="header-mid__avatar" src={props.avatar} alt ="avatar"/></div>
                     </div>
                     <div className="PrevComments-box-NTC-Right">
-                        <p className="PrevComments-box-NTC__name">{PrevCommentsName2}</p>
-                        <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp2}</p>
+                        <div className="PrevComments-box-NTC-Right-Container">
+                            <p className="PrevComments-box-NTC-Right__name">{PrevCommentsName2}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp2}</p>
+                        </div>
                         <p className="PrevComments-box-NTC__comment">{PrevCommentsText2}</p>
                     </div>
                 </div>

@@ -105,4 +105,185 @@
   .Hero-about {
     padding: 1rem;
   }
+}
+
+@media screen and (min-width: 320px) {
+  .About {
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+  .About-Title {
+    font-family: "Avenir-Page-Header";
+    font-size: 1.3rem;
+  }
+  .About__Title__text {
+    margin: 0;
+  }
+  .About-Author {
+    display: flex;
+    padding-top: 1rem;
+  }
+  .About-Author__stats {
+    width: 50%;
+    font-family: "Avenir-Body";
+    color: #AFAFAF;
+  }
+  .About-Author__stats__text {
+    font-family: "Avenir-Section-Header";
+    color: #323232;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+  .About-Author__stats__timestamp {
+    font-family: "Avenir-Body";
+    color: #AFAFAF;
+    margin: 0;
+  }
+  .About-Author__stats__views {
+    background: url(./assets/Icons/views.svg) no-repeat scroll;
+    padding-left: 1.75rem;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+  .About-Author__stats__likes {
+    background: url(./assets/Icons/likes.svg) no-repeat scroll;
+    padding-left: 1.75rem;
+    margin: 0;
+  }
+  .About-Desc {
+    font-family: "Avenir-Body";
+    color: #323232;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .Comments {
+    padding: 1rem;
+  }
+  .Comments__num {
+    font-family: "Avenir-Sub-Head";
+  }
+  .Comments__AddComment {
+    display: flex;
+    padding-top: 1.5rem;
+  }
+  .Comments__AddComment__Right {
+    width: 100%;
+  }
+  .Comments__AddComment__Left {
+    padding-top: 1.25rem;
+  }
+  .Comments__AddComment__Left__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 0.75rem;
+  }
+  .Comments__AddComment__Right__title {
+    margin: 0;
+    color: #AFAFAF;
+    font-family: "Avenir-Body";
+  }
+  .Comments__AddComment__Right__Search {
+    font-family: "Avenir-Button";
+    min-width: 90%;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    padding-bottom: 4rem;
+    border: 1px solid #E1E1E1;
+    margin-bottom: 0.75rem;
+    background-color: #FAFAFA;
+  }
+  .Comments__AddComment__Right__Search:active {
+    border: 2px solid #0095FF;
+  }
+  .Comments__AddComment__Right__Search:hover {
+    border: 2px solid #0095FF;
+  }
+  .Comments__AddComment__Right__Search:invalid {
+    border: 1px solid #D22D2D;
+  }
+  .Comments__AddComment__Right__btn {
+    font-family: "Avenir-Button";
+    background: url(./assets/Icons/add_comment.svg) no-repeat scroll 0.5rem 0.5rem;
+    min-width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #0095FF;
+    color: #FFFFFF;
+  }
+  .Comments__AddComment__Right__btn:hover {
+    background-color: #0065AD;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .PrevComments-box-NTC {
+    display: flex;
+    padding-top: 1rem;
+  }
+  .PrevComments-box-NTC-Right__name {
+    font-family: "Avenir-Sub-Head";
+    margin: 0;
+  }
+  .PrevComments-box-NTC__timestampe {
+    color: #AFAFAF;
+    font-family: "Avenir-Body";
+  }
+  .PrevComments-box-NTC__comment {
+    font-family: "Avenir-Body";
+    color: #323232;
+    margin: 0;
+  }
+  .PrevComments-box-NTC-Left__Avatar {
+    margin-right: 0.75rem;
+    padding-top: 1rem;
+  }
+  .PrevComments-box-NTC-Right-Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .NextVideos-title {
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
+    color: #AFAFAF;
+    font-family: "Avenir-Body";
+    font-weight: bold;
+  }
+  .NextVideos-Lists {
+    margin: 0;
+    padding: 1rem;
+    padding-top: 0;
+  }
+  .NextVideos-Lists-Click {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+  }
+  .NextVideos-Lists-Click-Right {
+    width: 60%;
+  }
+  .NextVideos-Lists-Click-Right__Name {
+    margin: 0;
+  }
+  .NextVideos-Lists-Click-Right__Channel {
+    margin: 0;
+  }
+  .NextVideos-Lists-Click-Left {
+    width: 40%;
+    padding-right: 1rem;
+  }
+  .NextVideos-Lists-Click-Left__img {
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 4rem;
+    display: block;
+    background-size: contain;
+  }
 }/*# sourceMappingURL=App.css.map */
