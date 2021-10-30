@@ -1,6 +1,6 @@
 
 function VideoPlayer(props) {
-  console.log('videoplayer props', props);
+  // console.log('videoplayer props', props);
 
   return(
     <article className="NextVideos-Lists-Click"

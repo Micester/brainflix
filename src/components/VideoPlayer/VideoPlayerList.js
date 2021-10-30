@@ -2,9 +2,12 @@ import { Component } from'react';
 import  VideoPlayer from './VideoPlayer';
 
 class NextVideos extends Component {
-    // state = {
-    //     LastVideos: []
-    // }
+    // console.log('Next Vidoes', props);
+
+    state = {
+        playlist: [],
+        clickedItem: ''
+    }
     render() {
         return(
             <>
@@ -19,7 +22,15 @@ class NextVideos extends Component {
                                         <VideoPlayer 
                                         title={videos.title} 
                                         image={videos.image} 
-                                        channel={videos.channel} />
+                                        channel={videos.channel} 
+                                        updateActiveVideo={this.props.updateActiveVideo}
+                                        handleClicks={(event) => {
+                                            console.log(event);
+                                            console.log(videos.name);
+                                            this.setState({clickedItem: videos.name});
+
+                                          }}
+                                        />
                                     </ul>
                               
                         );

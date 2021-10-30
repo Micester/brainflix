@@ -44,16 +44,15 @@ console.log(videoDetails);
 class App extends React.Component {
   //Videos Array
   state = {
+    //Active Video
+    ActiveVideo: videoDetails[0],
     albums: videoDetails,
-    ActiveInfo: videoDetails,
-    ActiveComments: videoDetails,
+    // ActiveInfo: videoDetails,
+    // ActiveComments: videoDetails,
 
     //Working components  --> (Needs to be changed by onClick)
     //Hero Props
     HeroList: videoDetails,
-
-    //Active Video
-    ActiveVideo: videoDetails,
 
     //Title Props
     TitleList: videoDetails,
@@ -69,6 +68,7 @@ class App extends React.Component {
     videos: videos,
   };
 
+  //Update is good
   updateActiveVideo = (id) => {
     const foundVideoId = this.state.albums.findIndex((album)=> id === album.id);
     this.setState({
@@ -88,25 +88,33 @@ class App extends React.Component {
           <img class="ActiveImage">{this.state.ActiveVideo[0].image}</img>
         </section> */}
 
-        <Hero HeroList={this.state.HeroList}/> 
-        
+       {/* Needs to update */}
+      {/* <Hero HeroList={this.state.HeroList}/> */}
+        <Hero/>
+        <section>
+          <img>{this.state.videos.image}</img>
+        </section>
+
+         {/* Needs to update */}
         {/* Title/Author/Description/Comments */}
         <section className="About">
           <Title TitleList={this.state.TitleList}/>
           <Author AuthorList={this.state.AuthorList}/>
           <Desc DescList={this.state.DescList}/>
-      
         </section>
+
         <section className="Comments">
            <Comments CommentsList={this.state.CommentsList}/>
            <AddComments avatar={avatarSrc}/>
            <PrevComments avatar={avatarSrc} 
             PrevCommentsList={this.state.PrevCommentsList}/>
         </section>
-
+        
+         {/* Needs to update */}
         <section className="NextVideos">
           {/* <NextVideos /> */}
-          <NextVideos videos={this.state.videos}
+          <NextVideos 
+          videos={this.state.videos}
           updateActiveVideo={this.updateActiveVideo}
           />
         </section>
