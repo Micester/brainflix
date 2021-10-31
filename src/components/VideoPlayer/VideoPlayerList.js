@@ -25,16 +25,21 @@ class NextVideos extends Component {
                                         channel={videos.channel} 
                                         updateActiveVideo={this.props.updateActiveVideo}
                                         handleClicks={(event) => {
-                                            console.log(event);
-                                            console.log(videos.name);
-                                            this.setState({clickedItem: videos.name});
+                                            // console.log(event);
+                                            console.log(videos.image);
+                                            this.setState({clickedItem: videos.image});
 
                                           }}
                                         />
                                     </ul>
+                                 
                               
                         );
                     })}
+                       <div>
+                            Clicked Video: {this.state.clickedItem}
+                        </div>
+
                 {/* </ul>  */}
             </>
         );

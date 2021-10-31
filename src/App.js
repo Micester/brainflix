@@ -70,9 +70,9 @@ class App extends React.Component {
 
   //Update is good
   updateActiveVideo = (id) => {
-    const foundVideoId = this.state.albums.findIndex((album)=> id === album.id);
+    const foundVideoId = this.state.videos.findIndex((videos)=> id === videos.id);
     this.setState({
-    ActiveVideo: this.state.albums[foundVideoId]
+    ActiveVideo: this.state.videos[foundVideoId]
     });
   };
 
@@ -89,11 +89,11 @@ class App extends React.Component {
         </section> */}
 
        {/* Needs to update */}
-      {/* <Hero HeroList={this.state.HeroList}/> */}
-        <Hero/>
+        <Hero HeroList={this.state.HeroList}/>
+        {/* <Hero/>
         <section>
-          <img>{this.state.videos.image}</img>
-        </section>
+          <div>{this.state.ActiveVideo.image}</div>
+        </section> */}
 
          {/* Needs to update */}
         {/* Title/Author/Description/Comments */}
