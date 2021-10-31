@@ -180,6 +180,18 @@ $Alabaster: #FAFAFA; //Form Field background color.
     }
 }
 
+//Divider Lines for About & Comments
+.Divider {
+    @include mobile{
+        &-Line{ //Line color and stroke-width
+            stroke-width: 1px;
+            color: $Mercury;
+            margin-top: 1rem;
+
+        }
+    }
+}
+
 //Comments 
 .Comments{
 
@@ -261,7 +273,6 @@ $Alabaster: #FAFAFA; //Form Field background color.
     @include mobile{
         &-box-NTC{ 
             display: flex;
-            padding-top: 1rem;
         }
         &-box-NTC-Right__name{ //Comment name
             font-family: "Avenir-Sub-Head";

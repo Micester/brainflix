@@ -15,7 +15,6 @@ import videos from './data/videos.json';
 // import VideoList from './components/VideoPlayer/VideoPlayerList';
 
 
-
 //Hero
 import Hero from './components/Hero/Hero';
 
@@ -37,6 +36,9 @@ import PrevComments from './components/PrevComments/PrevComments';
 
 //Video Player
 import NextVideos from './components/VideoPlayer/VideoPlayerList';
+
+//Divider Lines
+import Divider from './components/Divider/Divider';
 
 
 console.log(videoDetails);
@@ -99,13 +101,16 @@ class App extends React.Component {
         {/* Title/Author/Description/Comments */}
         <section className="About">
           <Title TitleList={this.state.TitleList}/>
+          <Divider/>
           <Author AuthorList={this.state.AuthorList}/>
+          <Divider/>
           <Desc DescList={this.state.DescList}/>
         </section>
 
         <section className="Comments">
            <Comments CommentsList={this.state.CommentsList}/>
            <AddComments avatar={avatarSrc}/>
+           <Divider/>
            <PrevComments avatar={avatarSrc} 
             PrevCommentsList={this.state.PrevCommentsList}/>
         </section>

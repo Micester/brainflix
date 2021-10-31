@@ -1,4 +1,9 @@
 //Comments Hard Coded
+
+
+//Import Divider Lines
+import Divider from "../Divider/Divider";
+
 const PrevComments = (props) => {
     console.log('Prev Comments Name:', props.PrevCommentsList[0].comments[0].name) //Shows VideoPlayerList Array in console
 
@@ -34,6 +39,7 @@ const PrevComments = (props) => {
                         <p className="PrevComments-box-NTC__comment">{PrevCommentsText}</p>
                     </div>
                 </div>
+                <Divider/>
 
                 <div className="PrevComments-box-NTC">
                     <div className="PrevComments-box-NTC-Left">
@@ -47,6 +53,7 @@ const PrevComments = (props) => {
                         <p className="PrevComments-box-NTC__comment">{PrevCommentsText1}</p>
                     </div>
                 </div>
+                <Divider/>
 
                 <div className="PrevComments-box-NTC">
                     <div className="PrevComments-box-NTC-Left">
@@ -60,6 +67,7 @@ const PrevComments = (props) => {
                         <p className="PrevComments-box-NTC__comment">{PrevCommentsText2}</p>
                     </div>
                 </div>
+                <Divider/>
             </section>
         </section>
     )
