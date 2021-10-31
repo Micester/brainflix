@@ -3,7 +3,7 @@ const Header = (props) => {
         <header className="header">
             {/* header top Logo */}
             <div className="header-top">
-                <div className="header-top__logo"><img src={props.logo} alt ="Logo"/></div>
+                <div className="header-top__logo"><img className="header-top__logo__image" src={props.logo} alt ="Logo"/></div>
             </div>
             {/* header middle search-bar/avatar */}
             <div className="header-mid">
@@ -14,6 +14,7 @@ const Header = (props) => {
             <div className="header-bot">
                 <button className="header-bot__btn">UPLOAD</button>
             </div>
+            <div><img className="header-mid__avatar__tablet" src={props.avatar} alt ="avatar"/></div>
         </header>
     )
 }

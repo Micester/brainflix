@@ -7,7 +7,9 @@ const Hero = (props) => {
 
     return(
           //Video 
-          <video className="Hero-Image" poster={props.ActiveVideo.image} controls></video>
+          <div className="Hero">
+            <video className="Hero-Image" poster={props.ActiveVideo.image} controls></video>
+          </div>
     )
 }
 export default Hero;

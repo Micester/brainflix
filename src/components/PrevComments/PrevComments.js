@@ -1,6 +1,4 @@
 //Comments Hard Coded
-
-
 //Import Divider Lines
 import Divider from "../Divider/Divider";
 
@@ -23,11 +21,16 @@ const PrevComments = (props) => {
         <section className="PrevComments">
 
             <section className="PrevComments-box">
-    
                 {/* Left Avatar Image */}
                 <div className="PrevComments-box-NTC"> 
                     <div className="PrevComments-box-NTC-Left">
-                        <div className="PrevComments-box-NTC-Left__Avatar"><img className="header-mid__avatar" src={props.avatar} alt ="avatar"/></div>
+                        <div className="PrevComments-box-NTC-Left__Avatar">
+                            {/* Mobile Avatars */}
+                            <img className="header-mid__avatar" src={props.avatar} alt ="avatar"/>
+
+                            {/* Tablet Avatars */}
+                            <img className="header-mid__avatar-comments" src={props.avatar} alt ="avatar"/>
+                        </div>
                     </div>
                 
                 {/* Comment/name/Timestamp */}
@@ -43,7 +46,10 @@ const PrevComments = (props) => {
 
                 <div className="PrevComments-box-NTC">
                     <div className="PrevComments-box-NTC-Left">
-                        <div className="PrevComments-box-NTC-Left__Avatar"><img className="header-mid__avatar" src={props.avatar} alt ="avatar"/></div>
+                        <div className="PrevComments-box-NTC-Left__Avatar">
+                            <img className="header-mid__avatar" src={props.avatar} alt ="avatar"/>
+                            <img className="header-mid__avatar-comments" src={props.avatar} alt ="avatar"/>
+                        </div>
                     </div>
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">
@@ -57,7 +63,10 @@ const PrevComments = (props) => {
 
                 <div className="PrevComments-box-NTC">
                     <div className="PrevComments-box-NTC-Left">
-                        <div className="PrevComments-box-NTC-Left__Avatar"><img className="header-mid__avatar" src={props.avatar} alt ="avatar"/></div>
+                        <div className="PrevComments-box-NTC-Left__Avatar">
+                            <img className="header-mid__avatar" src={props.avatar} alt ="avatar"/>
+                            <img className="header-mid__avatar-comments" src={props.avatar} alt ="avatar"/>
+                        </div>
                     </div>
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">

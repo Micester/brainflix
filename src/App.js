@@ -105,7 +105,7 @@ class App extends React.Component {
         {/* Title/Author/Description/Comments */}
         <section className="About">
           <Title TitleList={this.state.TitleList}/>
-          <Divider/>
+          {/* <Divider className="mobile"/> */}
           <Author AuthorList={this.state.AuthorList}/>
           <Divider/>
           <Desc DescList={this.state.DescList}/>

@@ -55,3 +55,50 @@
     font-size: 0.75rem;
     line-height: 1.25rem;
 }
+
+
+//Tablet & Desktop 
+
+@font-face {
+    font-family: "Avenir-Page-Header-TD"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+    font-weight: bold; //700
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+}
+
+//Section Header
+@font-face {
+    font-family: "Avenir-Section-Header-TD"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+    font-weight: bold; //700
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+//Sub Header
+@font-face {
+    font-family: "Avenir-Sub-Head-TD"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff");
+    font-weight: bold; //700
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+}
+
+//Body Copy
+@font-face {
+    font-family: "Avenir-Body-TD"; //Regular Font
+    src: url("/src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff");
+    font-weight: 400; //Regular
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+}
+
+//Labels & Buttons 
+@font-face {
+    font-family: "Avenir-Button-TD"; //Bold Font 
+    src: url("/src/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff");
+    font-weight: 700; //700
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}

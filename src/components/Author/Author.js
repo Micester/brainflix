@@ -1,4 +1,5 @@
 //Main Title Under Hero
+
 const Author = (props) => {
     // console.log('Author Props', props) //Shows VideoPlayerList Array in console
     const HeroChannel = props.AuthorList[0].channel;
@@ -17,6 +18,22 @@ const Author = (props) => {
                 <p className="About-Author__stats__views">{views}</p>
                 <p className="About-Author__stats__likes">{likes}</p>
               </div>
+
+              {/* Tablet / Desktop */}
+              {/* <div className="About-Author__stats__Tablet"> */}
+                <div className="About-Author__stats__Tablet__left">
+                  <p className="About-Author__stats__Tablet__left__text">By {HeroChannel}</p>
+                  <p className="About-Author__stats__Tablet__left__timestamp">{timestamp}</p>
+                </div>
+
+                <div className="About-Author__stats__Tablet__right">
+                  <p className="About-Author__stats__Tablet__right__views">{views}</p>
+                  <p className="About-Author__stats__Tablet__right__likes">{likes}</p>
+                </div>
+              {/* </div> */}
+
+
+
         </section>
     )
 }
