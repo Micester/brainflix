@@ -13,30 +13,27 @@ class NextVideos extends Component {
             <>
              <p className="NextVideos-title">NEXT VIDEOS</p>
                 {/* <ul className="NextVideos-Lists"> */}
-                    {this.props.videos
-                    .filter((videos) => videos.id !== '2')
-                        .map((videos) => {
+                    {this.props.albums
+                    .filter((album) => album.id !== '2')
+                        .map((album) => {
                             return (    
-                    
-                                    <ul className="NextVideos-Lists" key={videos.id}>
+                                    <ul className="NextVideos-Lists" key={album.id}>
                                         <VideoPlayer 
-                                        title={videos.title} 
-                                        image={videos.image} 
-                                        channel={videos.channel} 
+                                        title={album.title} 
+                                        image={album.image} 
+                                        channel={album.channel} 
+                                        albumObj={album}
                                         updateActiveVideo={this.props.updateActiveVideo}
                                         handleClicks={(event) => {
-                                            // console.log(event);
-                                            console.log(videos.image);
-                                            this.setState({clickedItem: videos.image});
-
+                                            console.log(event);
+                                            console.log(album.image);
+                                            this.setState({clickedItem: album.image});
                                           }}
                                         />
                                     </ul>
-                                 
-                              
                         );
                     })}
-                       <div>
+                        <div>
                             Clicked Video: {this.state.clickedItem}
                         </div>
 

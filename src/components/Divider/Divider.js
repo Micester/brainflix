@@ -5,7 +5,7 @@ const Divider = () => {
     return(
         <div className="Divider">
             {/* Divider-Line */}
-            <hr class="Divider-Line"/>
+            <hr className="Divider-Line"/>
         </div>
     )
 }

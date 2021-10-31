@@ -1,6 +1,6 @@
 //Main Title Under Hero
 const Author = (props) => {
-    console.log('Author Props', props) //Shows VideoPlayerList Array in console
+    // console.log('Author Props', props) //Shows VideoPlayerList Array in console
     const HeroChannel = props.AuthorList[0].channel;
     const timestamp = props.AuthorList[0].timestamp;
     const views = props.AuthorList[0].views;

@@ -1,6 +1,6 @@
 
 function VideoPlayer(props) {
-  // console.log('videoplayer props', props);
+  // console.log('videoplayer props', ActiveVideo.image);
 
   return(
     <article className="NextVideos-Lists-Click"
@@ -16,11 +16,8 @@ function VideoPlayer(props) {
           <p className="NextVideos-Lists-Click-Right__Name">{props.title}</p>
           <p className="NextVideos-Lists-Click-Right__Channel">{props.channel}</p>
         </div>
-
     </article>
-
   )
 }
-
 export default VideoPlayer;
 

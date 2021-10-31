@@ -6,9 +6,9 @@ import Header from './components/Header/Header';
 import logoSrc from './assets/Logo/BrainFlix-logo.svg';
 import avatarSrc from './assets/Images/Mohan-muruge.jpg';
 
-
 //Import Video-detail data
 import videoDetails from './data/video-details.json';
+import ActiveVideo from './data/video-details.json';
 
 //Import Vidoes data
 import videos from './data/videos.json';
@@ -17,6 +17,7 @@ import videos from './data/videos.json';
 
 //Hero
 import Hero from './components/Hero/Hero';
+import img from './components/VideoPlayer/VideoPlayerList';
 
 //Title 
 import Title from './components/Title/Title';
@@ -42,6 +43,8 @@ import Divider from './components/Divider/Divider';
 
 
 console.log(videoDetails);
+console.log(ActiveVideo[0].image);
+
 
 class App extends React.Component {
   //Videos Array
@@ -72,9 +75,9 @@ class App extends React.Component {
 
   //Update is good
   updateActiveVideo = (id) => {
-    const foundVideoId = this.state.videos.findIndex((videos)=> id === videos.id);
+    const foundVideoId = this.state.albums.findIndex((album)=> id === album.id);
     this.setState({
-    ActiveVideo: this.state.videos[foundVideoId]
+    ActiveVideo: this.state.albums[foundVideoId]
     });
   };
 
@@ -91,7 +94,8 @@ class App extends React.Component {
         </section> */}
 
        {/* Needs to update */}
-        <Hero HeroList={this.state.HeroList}/>
+        <Hero ActiveVideo={this.state.ActiveVideo}/>
+   
         {/* <Hero/>
         <section>
           <div>{this.state.ActiveVideo.image}</div>
@@ -119,7 +123,7 @@ class App extends React.Component {
         <section className="NextVideos">
           {/* <NextVideos /> */}
           <NextVideos 
-          videos={this.state.videos}
+          albums={this.state.albums}
           updateActiveVideo={this.updateActiveVideo}
           />
         </section>

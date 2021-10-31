@@ -12,6 +12,7 @@ $BrainFlix-Blue: #0095FF; //primary CTA color
 $white: #FFFFFF;
 $BrainFlix-Black: #323232; //Primary Text color
 $Silver: #AFAFAF; //Secondary Text color
+
 //Secondary Colors
 $Mercury: #E1E1E1;
 $BrainFlix-DarkBlue: #0065AD; //CTA hover state
@@ -45,24 +46,19 @@ $Alabaster: #FAFAFA; //Form Field background color.
            padding: 0.75rem;
            border: 1px solid $Mercury;
            margin-right: 0.75rem;
-        
-           
            background: url(./assets/Icons/search.svg) no-repeat scroll 0.65rem 0.65rem;
            background-color: $Alabaster;
            padding-left: 2.25rem;
            &:active{ // Active currently does nothing !!!
             border: 2px solid $BrainFlix-Blue;
            }
-
            &:hover{ //Hover makes the border blue but reverts to a orange
             border: 2px solid $BrainFlix-Blue;
            }
-
            &:invalid{ // Does not work !!!
             border: 1px solid #D22D2D;
            }
        } 
-       
        &-mid__avatar{ //Avatar-Logo
            border-radius: 50%;
            width: 2.25rem;
@@ -80,10 +76,8 @@ $Alabaster: #FAFAFA; //Form Field background color.
            border-radius: 0.25rem;
            background-color: $BrainFlix-Blue;
            color: $white;
-        
            &:hover{
-               background-color: $BrainFlix-DarkBlue;
-               
+               background-color: $BrainFlix-DarkBlue; 
            }
        }
     }
@@ -106,14 +100,13 @@ $Alabaster: #FAFAFA; //Form Field background color.
 //         }
     
 // }
-
 //Hero Image
+
 .Hero {
     @include mobile{
         // display: flex;
         // align-items: center;
         // position: relative;
-      
         &-Image{
             width: 100%;
             height: auto;
@@ -127,12 +120,10 @@ $Alabaster: #FAFAFA; //Form Field background color.
 
 //About Video (Under Hero Image) States,views,likes, etc.
 .About {
-    
     //Mobile - About 
     @include mobile{
         padding: 1rem;
         padding-top: 1.5rem;
-
         &-Title{
             font-family: "Avenir-Page-Header";
             font-size: 1.3rem;
@@ -159,7 +150,6 @@ $Alabaster: #FAFAFA; //Form Field background color.
             font-family: "Avenir-Body";
             color: $Silver;
             margin: 0;
-
         }
         &-Author__stats__views{ //Video Views
             background: url(./assets/Icons/views.svg) no-repeat scroll;
@@ -187,20 +177,16 @@ $Alabaster: #FAFAFA; //Form Field background color.
             stroke-width: 1px;
             color: $Mercury;
             margin-top: 1rem;
-
         }
     }
 }
 
 //Comments 
 .Comments{
-
     //Mobile - Comments
     @include mobile {
         padding-right: 1rem;
         padding-left: 1rem;
-
-
         &__num{//# of Comments 
             font-family: "Avenir-Sub-Head";
         }
@@ -238,7 +224,6 @@ $Alabaster: #FAFAFA; //Form Field background color.
             margin-bottom: 0.75rem;
             background-color: $Alabaster;
             color: $BrainFlix-Black;
-
             &:active{ // Active currently does nothing !!!
              border: 2px solid $BrainFlix-Blue;
             }
@@ -249,7 +234,6 @@ $Alabaster: #FAFAFA; //Form Field background color.
              border: 1px solid #D22D2D;
             }
         }  
-        
         //Comment Button
         &__AddComment__Right__btn{
             font-family: "Avenir-Button";
@@ -260,10 +244,8 @@ $Alabaster: #FAFAFA; //Form Field background color.
             border-radius: 0.25rem;
             background-color: $BrainFlix-Blue;
             color: $white;
-
             &:hover{
                 background-color: $BrainFlix-DarkBlue;
-                
             } 
         }
     }
@@ -298,9 +280,6 @@ $Alabaster: #FAFAFA; //Form Field background color.
         }
     }
 }
-
-
-
 // NextVideos 
 .NextVideos {
     //Mobile - NextVideos
