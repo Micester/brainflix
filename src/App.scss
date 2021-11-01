@@ -36,6 +36,7 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
            display: flex;
            align-items: flex-end;
            width: 100%;
+           min-width: 15rem;
            padding: 0.75rem;
        }
        &-mid__search{ //Header Search-bar
@@ -97,7 +98,86 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
         align-items: center;
         flex-direction: row;
         justify-content: flex-end;
+        padding: 1.5rem;
+        max-width: 100%;
+       &-top__logo{ //BrainFlix Logo
+           max-height: 1.5625rem;
+           max-width: 7.5rem;
+           padding-right: 7rem;
+       }
+       &-mid{ // Search-bar Div
+           display: flex;
+           align-items: flex-end;
+           width: 15rem;
+           padding: 0;
+       }
+       &-mid__search{ //Header Search-bar
+           font-family: "Avenir-Button-TD";
+           width: 15rem;
+           max-width: 100%;
+           height: 1rem;
+           border-radius: 0.25rem;
+           padding: 1rem;
+           border: 1px solid $Mercury;
+           margin-right: 0;
+           background: url(./assets/Icons/search.svg) no-repeat scroll 0.8rem 0.8rem;
+           background-color: $Alabaster;
+           padding-left: 2.25rem;
+           &:active{ // Active currently does nothing !!!
+            border: 2px solid $BrainFlix-Blue;
+           }
+           &:hover{ //Hover makes the border blue but reverts to a orange
+            border: 2px solid $BrainFlix-Blue;
+           }
+           &:invalid{ // Does not work !!!
+            border: 1px solid #D22D2D;
+           }
+        } 
+        &-mid__avatar{ //Avatar-Logo
+            border-radius: 50%;
+            width: 2.25rem;
+            height: 2.25rem;
+            display: none;
+        }
+        &-mid__avatar__tablet{ //Avatart-Logo for Tablet/Desktop
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inherit;
+        }
+        &-mid__avatar-comments{
+            filter: $Silver;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-right: 1.5rem;
+            display: inherit;
+        }
+        &-bot{ //Button - Div
+           width: 9.375rem;
+           padding-right: 2rem;
+           padding-left: 2rem;
+        }
+         &-bot__btn{ //Button
+           font-family: "Avenir-Button-TD";
+           min-width: 9.375rem;
+           background: url(./assets/Icons/upload.svg) no-repeat scroll 0.7rem 0.7rem;
+           height: 3rem;
+           border: none;
+           border-radius: 0.25rem;
+           background-color: $BrainFlix-Blue;
+           color: $white;
+           &:hover{
+               background-color: $BrainFlix-DarkBlue; 
+           }
+       }
+    }
 
+    @include desktop {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
         padding: 1.5rem;
         max-width: 100%;
        &-top__logo{ //BrainFlix Logo
@@ -174,30 +254,9 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
     }
 }
 
-// // Button 
-// .Button{
-//         //Button
-//         font-family: "Avenir-Button";
-//         min-width: 100%;
-//         height: 2.5rem;
-//         border: none;
-//         border-radius: 0.25rem;
-//         background-color: $BrainFlix-Blue;
-//         color: $white;
-     
-//         &:hover{
-//             background-color: $BrainFlix-DarkBlue;
-            
-//         }
-    
-// }
 //Hero Image
-
 .Hero {
     @include mobile{
-        // display: flex;
-        // align-items: center;
-        // position: relative;
         &-Image{
             width: 100%;
             height: auto;
@@ -206,19 +265,40 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
     }
 
     @include tablet{
-        // display: flex;
-        // align-items: center;
-        // position: relative;
         padding-right: 1.5rem;
         padding-left: 1.5rem;;
-
         background-color: $BrainFlix-DarkBlack;
-
         &-Image{
             width: 100%;
             height: auto;
             display: block;
         }
+    }
+
+    @include desktop{
+        padding-right: 12rem;
+        padding-left: 12rem;;
+        background-color: $BrainFlix-DarkBlack;
+        &-Image{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+//Desktop Side Vidoes
+.About-Comments{
+    @include desktop{
+        display: flex;
+        transform: translateX(5.5rem);
+         &-Left{
+             width: 130%;
+         }
+         &-right{
+             width: 75%;
+             border-left: solid 1px $Mercury;
+         }
     }
 }
 
@@ -361,6 +441,14 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
             stroke-width: 1px;
             color: $Mercury;
             margin-top: 1rem;
+        }
+    }
+    @include desktop{
+        &-Line{ //Line color and stroke-width
+            stroke-width: 1px;
+            color: $Mercury;
+            margin-top: 1rem;
+            width: 103%;
         }
     }
 }
@@ -549,6 +637,7 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
         }
     }
 }
+
 // NextVideos 
 .NextVideos {
     //Mobile - NextVideos
@@ -643,8 +732,55 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
             height: 4rem;
             display: block;
             background-size: contain;
+            object-fit: cover;    
+        }
+    }
+
+    @include desktop{
+        &-title{
+            padding: 1rem;
+            padding-bottom: 1.5rem;
+            margin: 0;
+            color: $Silver;
+            font-family: "Avenir-Body-TD"; 
+            font-weight: bold;
+        }
+        &-Lists{ //List of Videos 
+            margin: 0;
+            padding: 1rem;
+            padding-top: 0;
+        }
+        &-Lists-Click{ //Once Clicked function
+            list-style-type: none;
+            align-items: center;
+        }
+        &-Lists-Click-Right{ //Right Container
+            width: 100%;
+            transform: translateX(-1rem);
+        }
+        &-Lists-Click-Right__Name{ //Right Container - name
+            margin: 0;
+            font-family: "Avenir-Sub-Head-TD";
+            width: 60%;
+            margin-bottom: 0.25rem;
+        }
+        &-Lists-Click-Right__Channel{//Right Container - channel
+            margin: 0;
+            font-family: "Avenir-Body-TD";
+            color:$BrainFlix-Black;
+        }
+        &-Lists-Click-Left{ //Left Container 
+            width: 50%;
+            padding-right: 1rem;
+            position: relative;
+        }
+        &-Lists-Click-Left__img{ //Left Container images
+            border-radius: 0.25rem;
+            max-width: 80%;
+            height: 4rem;
+            display: block;
+            background-size: contain;
             object-fit: cover;
-           
         }
     }
 }

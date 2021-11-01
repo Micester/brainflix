@@ -1,6 +1,5 @@
-
+//Videos rendered to videroPLayer
 function VideoPlayer(props) {
-  // console.log('videoplayer props', ActiveVideo.image);
 
   return(
     <article className="NextVideos-Lists-Click"

@@ -103,30 +103,41 @@ class App extends React.Component {
 
          {/* Needs to update */}
         {/* Title/Author/Description/Comments */}
-        <section className="About">
-          <Title TitleList={this.state.TitleList}/>
-          {/* <Divider className="mobile"/> */}
-          <Author AuthorList={this.state.AuthorList}/>
-          <Divider/>
-          <Desc DescList={this.state.DescList}/>
-        </section>
 
-        <section className="Comments">
-           <Comments CommentsList={this.state.CommentsList}/>
-           <AddComments avatar={avatarSrc}/>
-           <Divider/>
-           <PrevComments avatar={avatarSrc} 
-            PrevCommentsList={this.state.PrevCommentsList}/>
-        </section>
+        <section className="About-Comments">
+          <div className="About-Comments-Left">
+            <section className="About">
+              <Title TitleList={this.state.TitleList}/>
+              {/* <Divider className="mobile"/> */}
+              <Author AuthorList={this.state.AuthorList}/>
+              <Divider/>
+              <Desc DescList={this.state.DescList}/>
+            </section>
+
+            <section className="Comments">
+              <Comments CommentsList={this.state.CommentsList}/>
+              <AddComments avatar={avatarSrc}/>
+              <Divider/>
+              <PrevComments avatar={avatarSrc} 
+                PrevCommentsList={this.state.PrevCommentsList}/>
+            </section>
+          </div>
+
+          
+    
         
          {/* Needs to update */}
-        <section className="NextVideos">
-          {/* <NextVideos /> */}
-          <NextVideos 
-          albums={this.state.albums}
-          updateActiveVideo={this.updateActiveVideo}
-          />
+         <div className="About-Comments-right">
+          <section className="NextVideos">
+            {/* <NextVideos /> */}
+            <NextVideos 
+            albums={this.state.albums}
+            updateActiveVideo={this.updateActiveVideo}
+            />
+          </section>
+          </div>
         </section>
+
 
   
         {/* Idk what this is */}

@@ -84,6 +84,7 @@
     display: flex;
     align-items: flex-end;
     width: 100%;
+    min-width: 15rem;
     padding: 0.75rem;
   }
   .header-mid__search {
@@ -220,6 +221,87 @@
     background-color: #0065AD;
   }
 }
+@media screen and (min-width: 1280px) {
+  .header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  .header-top__logo {
+    max-height: 1.5625rem;
+    max-width: 7.5rem;
+    padding-right: 7rem;
+  }
+  .header-mid {
+    display: flex;
+    align-items: flex-end;
+    width: 15rem;
+    padding: 0;
+  }
+  .header-mid__search {
+    font-family: "Avenir-Button-TD";
+    width: 15rem;
+    max-width: 100%;
+    height: 1rem;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    border: 1px solid #E1E1E1;
+    margin-right: 0;
+    background: url(./assets/Icons/search.svg) no-repeat scroll 0.8rem 0.8rem;
+    background-color: #FAFAFA;
+    padding-left: 2.25rem;
+  }
+  .header-mid__search:active {
+    border: 2px solid #0095FF;
+  }
+  .header-mid__search:hover {
+    border: 2px solid #0095FF;
+  }
+  .header-mid__search:invalid {
+    border: 1px solid #D22D2D;
+  }
+  .header-mid__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: none;
+  }
+  .header-mid__avatar__tablet {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inherit;
+  }
+  .header-mid__avatar-comments {
+    filter: #AFAFAF;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    display: inherit;
+  }
+  .header-bot {
+    width: 9.375rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .header-bot__btn {
+    font-family: "Avenir-Button-TD";
+    min-width: 9.375rem;
+    background: url(./assets/Icons/upload.svg) no-repeat scroll 0.7rem 0.7rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #0095FF;
+    color: #FFFFFF;
+  }
+  .header-bot__btn:hover {
+    background-color: #0065AD;
+  }
+}
 
 @media screen and (min-width: 320px) {
   .Hero-Image {
@@ -238,6 +320,32 @@
     width: 100%;
     height: auto;
     display: block;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .Hero {
+    padding-right: 12rem;
+    padding-left: 12rem;
+    background-color: #000000;
+  }
+  .Hero-Image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .About-Comments {
+    display: flex;
+    transform: translateX(5.5rem);
+  }
+  .About-Comments-Left {
+    width: 130%;
+  }
+  .About-Comments-right {
+    width: 75%;
+    border-left: solid 1px #E1E1E1;
   }
 }
 
@@ -375,6 +483,14 @@
     stroke-width: 1px;
     color: #E1E1E1;
     margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .Divider-Line {
+    stroke-width: 1px;
+    color: #E1E1E1;
+    margin-top: 1rem;
+    width: 103%;
   }
 }
 
@@ -638,6 +754,54 @@
   .NextVideos-Lists-Click-Left__img {
     border-radius: 0.25rem;
     max-width: 50%;
+    height: 4rem;
+    display: block;
+    background-size: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .NextVideos-title {
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
+    color: #AFAFAF;
+    font-family: "Avenir-Body-TD";
+    font-weight: bold;
+  }
+  .NextVideos-Lists {
+    margin: 0;
+    padding: 1rem;
+    padding-top: 0;
+  }
+  .NextVideos-Lists-Click {
+    list-style-type: none;
+    align-items: center;
+  }
+  .NextVideos-Lists-Click-Right {
+    width: 100%;
+    transform: translateX(-1rem);
+  }
+  .NextVideos-Lists-Click-Right__Name {
+    margin: 0;
+    font-family: "Avenir-Sub-Head-TD";
+    width: 60%;
+    margin-bottom: 0.25rem;
+  }
+  .NextVideos-Lists-Click-Right__Channel {
+    margin: 0;
+    font-family: "Avenir-Body-TD";
+    color: #323232;
+  }
+  .NextVideos-Lists-Click-Left {
+    width: 50%;
+    padding-right: 1rem;
+    position: relative;
+  }
+  .NextVideos-Lists-Click-Left__img {
+    border-radius: 0.25rem;
+    max-width: 80%;
     height: 4rem;
     display: block;
     background-size: contain;
