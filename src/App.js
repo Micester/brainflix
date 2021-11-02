@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-//Header -- Mobile Done
+//Header -- Mobile 
 import Header from './components/Header/Header';
 import logoSrc from './assets/Logo/BrainFlix-logo.svg';
 import avatarSrc from './assets/Images/Mohan-muruge.jpg';
@@ -12,31 +12,21 @@ import ActiveVideo from './data/video-details.json';
 
 //Import Vidoes data
 import videos from './data/videos.json';
-// import VideoList from './components/VideoPlayer/VideoPlayerList';
 
-
+//Video-List
+import VideoPlayerList from './components/VideoPlayer/VideoPlayerList';
 //Hero
 import Hero from './components/Hero/Hero';
-import img from './components/VideoPlayer/VideoPlayerList';
-
 //Title 
 import Title from './components/Title/Title';
-
 //Author
 import Author from './components/Author/Author';
-
 //Description 
 import Desc from './components/Desc/Desc';
-
 //Comments
 import Comments from './components/Comments/Comments';
-
 import AddComments from './components/AddComment/AddComment';
-
 import PrevComments from './components/PrevComments/PrevComments';
-
-//Video Player
-import NextVideos from './components/VideoPlayer/VideoPlayerList';
 
 //Divider Lines
 import Divider from './components/Divider/Divider';
@@ -52,13 +42,10 @@ class App extends React.Component {
     //Active Video
     ActiveVideo: videoDetails[0],
     albums: videoDetails,
-    // ActiveInfo: videoDetails,
-    // ActiveComments: videoDetails,
 
-    //Working components  --> (Needs to be changed by onClick)
+
     //Hero Props
     HeroList: videoDetails,
-
     //Title Props
     TitleList: videoDetails,
     //Author Props
@@ -68,14 +55,16 @@ class App extends React.Component {
     //Comments Props
     CommentsList: videoDetails,
     PrevCommentsList: videoDetails,
-
     //NextVideo
     videos: videos,
   };
 
-  //Update is good
-  updateActiveVideo = (id) => {
-    const foundVideoId = this.state.albums.findIndex((album)=> id === album.id);
+  //HandleClick is good
+  handleClick = (id) => {
+    console.log('handled click');
+    console.log(id);
+    const foundVideoId = this.state.albums.findIndex((album)=> id == album.id);
+    console.log(foundVideoId);
     this.setState({
     ActiveVideo: this.state.albums[foundVideoId]
     });
@@ -84,26 +73,16 @@ class App extends React.Component {
   render(){
     return (
       <>
-
         {/* Header */}
         <Header logo={logoSrc} avatar={avatarSrc}/>
 
-        {/* Active Hero Image*/}
-        {/* <section>
-          <img class="ActiveImage">{this.state.ActiveVideo[0].image}</img>
-        </section> */}
-
        {/* Needs to update */}
-        <Hero ActiveVideo={this.state.ActiveVideo}/>
-   
-        {/* <Hero/>
-        <section>
-          <div>{this.state.ActiveVideo.image}</div>
-        </section> */}
+       <section>
+          <Hero ActiveVideo={this.state.ActiveVideo}/>
+        </section>
 
          {/* Needs to update */}
         {/* Title/Author/Description/Comments */}
-
         <section className="About-Comments">
           <div className="About-Comments-Left">
             <section className="About">
@@ -123,26 +102,17 @@ class App extends React.Component {
             </section>
           </div>
 
-          
-    
-        
          {/* Needs to update */}
          <div className="About-Comments-right">
           <section className="NextVideos">
             {/* <NextVideos /> */}
-            <NextVideos 
+            <VideoPlayerList 
             albums={this.state.albums}
-            updateActiveVideo={this.updateActiveVideo}
+            handleClick={this.handleClick}
             />
           </section>
           </div>
         </section>
-
-
-  
-        {/* Idk what this is */}
-        {/* <VideoList albums={this.state.albums}
-        updateActiveVideo={this.updateActiveVideo}/> */}
       </>
     );
   }

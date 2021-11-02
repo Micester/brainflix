@@ -1,11 +1,11 @@
 //Videos rendered to videroPLayer
 function VideoPlayer(props) {
-
   return(
-    <article className="NextVideos-Lists-Click"
-     onClick={() => {
-      props.updateActiveVideo(props.id);
-     }}
+    <article 
+      onClick={() => {
+        props.handleClick(props.id);
+      }}  
+      className="NextVideos-Lists-Click"
      >
         <div className="NextVideos-Lists-Click-Left">
           <img className="NextVideos-Lists-Click-Left__img" src={props.image} alt={props.name}/>
