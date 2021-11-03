@@ -46,12 +46,12 @@ class App extends React.Component {
 
     //Hero Props
     HeroList: videoDetails,
-    //Title Props
-    TitleList: videoDetails,
-    //Author Props
-    AuthorList: videoDetails,
-    //Description Props
-    DescList: videoDetails,
+    // //Title Props
+    // TitleList: videoDetails,
+    // //Author Props
+    // AuthorList: videoDetails,
+    // //Description Props
+    // DescList: videoDetails,
     //Comments Props
     CommentsList: videoDetails,
     PrevCommentsList: videoDetails,

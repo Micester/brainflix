@@ -3,9 +3,13 @@
 import Divider from "../Divider/Divider";
 
 const PrevComments = (props) => {
+    const newDate = new Date(props.ActiveVideo.comments[0].timestamp);
+    const newDate1 = new Date(props.ActiveVideo.comments[1].timestamp);
+    const newDate2 = new Date(props.ActiveVideo.comments[2].timestamp);
+
+    const finalDate = new Date(props.ActiveVideo.comments.timestamp);
     return(
         <section className="PrevComments">
-
             <section className="PrevComments-box">
                 {/* Left Avatar Image */}
                 <div className="PrevComments-box-NTC"> 
@@ -23,7 +27,7 @@ const PrevComments = (props) => {
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">
                             <p className="PrevComments-box-NTC-Right__name">{props.ActiveVideo.comments[0].name}</p>
-                            <p className="PrevComments-box-NTC__timestampe">{props.ActiveVideo.comments[0].comment.timestamp}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{finalDate.toLocaleDateString()}</p>
                         </div>
                         <p className="PrevComments-box-NTC__comment">{props.ActiveVideo.comments[0].comment}</p>
                     </div>
@@ -40,7 +44,7 @@ const PrevComments = (props) => {
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">
                             <p className="PrevComments-box-NTC-Right__name">{props.ActiveVideo.comments[1].name}</p>
-                            <p className="PrevComments-box-NTC__timestampe">{props.ActiveVideo.comments[1].comment.timestamp}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{newDate1.toLocaleDateString()}</p>
                         </div>
                         <p className="PrevComments-box-NTC__comment">{props.ActiveVideo.comments[1].comment}</p>
                     </div>
@@ -57,7 +61,7 @@ const PrevComments = (props) => {
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">
                             <p className="PrevComments-box-NTC-Right__name">{props.ActiveVideo.comments[2].name}</p>
-                            <p className="PrevComments-box-NTC__timestampe">{props.ActiveVideo.comments[2].comment.timestamp}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{newDate2.toLocaleDateString()}</p>
                         </div>
                         <p className="PrevComments-box-NTC__comment">{props.ActiveVideo.comments[2].comment}</p>
                     </div>
@@ -68,3 +72,5 @@ const PrevComments = (props) => {
     )
 }
 export default PrevComments;
+
+

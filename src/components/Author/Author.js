@@ -1,10 +1,11 @@
 //Main Title Under Hero
 const Author = (props) => {
+    const newDate = new Date(props.ActiveVideo.timestamp);
     return(
         <section className="About-Author">
               <div className="About-Author__stats">
                 <p className="About-Author__stats__text">By {props.ActiveVideo.channel}</p>
-                <p className="About-Author__stats__timestamp">{props.ActiveVideo.timestamp}</p>
+                <p className="About-Author__stats__timestamp">{newDate.toLocaleDateString()}</p>
               </div>
 
               <div className="About-Author__stats">
@@ -15,7 +16,7 @@ const Author = (props) => {
               {/* Tablet / Desktop */}
                 <div className="About-Author__stats__Tablet__left">
                   <p className="About-Author__stats__Tablet__left__text">By {props.ActiveVideo.channel}</p>
-                  <p className="About-Author__stats__Tablet__left__timestamp">{props.ActiveVideo.timestamp}</p>
+                  <p className="About-Author__stats__Tablet__left__timestamp">{newDate.toLocaleDateString()}</p>
                 </div>
 
                 <div className="About-Author__stats__Tablet__right">
