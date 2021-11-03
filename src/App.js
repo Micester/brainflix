@@ -86,11 +86,11 @@ class App extends React.Component {
         <section className="About-Comments">
           <div className="About-Comments-Left">
             <section className="About">
-              <Title TitleList={this.state.TitleList}/>
+              <Title ActiveVideo={this.state.ActiveVideo}/>
               {/* <Divider className="mobile"/> */}
-              <Author AuthorList={this.state.AuthorList}/>
+              <Author ActiveVideo={this.state.ActiveVideo}/>
               <Divider/>
-              <Desc DescList={this.state.DescList}/>
+              <Desc ActiveVideo={this.state.ActiveVideo}/>
             </section>
 
             <section className="Comments">
@@ -98,7 +98,7 @@ class App extends React.Component {
               <AddComments avatar={avatarSrc}/>
               <Divider/>
               <PrevComments avatar={avatarSrc} 
-                PrevCommentsList={this.state.PrevCommentsList}/>
+                ActiveVideo={this.state.ActiveVideo}/>
             </section>
           </div>
 

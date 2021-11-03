@@ -3,20 +3,6 @@
 import Divider from "../Divider/Divider";
 
 const PrevComments = (props) => {
-    console.log('Prev Comments Name:', props.PrevCommentsList[0].comments[0].name) //Shows VideoPlayerList Array in console
-
-    const PrevCommentsName = props.PrevCommentsList[0].comments[0].name;
-    const PrevCommentsTimestamp = props.PrevCommentsList[0].comments[0].timestamp;
-    const PrevCommentsText = props.PrevCommentsList[0].comments[0].comment;
-    
-    const PrevCommentsName1 = props.PrevCommentsList[1].comments[1].name;
-    const PrevCommentsTimestamp1 = props.PrevCommentsList[1].comments[1].timestamp;
-    const PrevCommentsText1 = props.PrevCommentsList[1].comments[1].comment;
-
-    const PrevCommentsName2 = props.PrevCommentsList[2].comments[2].name;
-    const PrevCommentsTimestamp2 = props.PrevCommentsList[2].comments[2].timestamp;
-    const PrevCommentsText2 = props.PrevCommentsList[2].comments[2].comment;
-
     return(
         <section className="PrevComments">
 
@@ -36,10 +22,10 @@ const PrevComments = (props) => {
                 {/* Comment/name/Timestamp */}
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">
-                            <p className="PrevComments-box-NTC-Right__name">{PrevCommentsName}</p>
-                            <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp}</p>
+                            <p className="PrevComments-box-NTC-Right__name">{props.ActiveVideo.comments[0].name}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{props.ActiveVideo.comments[0].comment.timestamp}</p>
                         </div>
-                        <p className="PrevComments-box-NTC__comment">{PrevCommentsText}</p>
+                        <p className="PrevComments-box-NTC__comment">{props.ActiveVideo.comments[0].comment}</p>
                     </div>
                 </div>
                 <Divider/>
@@ -53,10 +39,10 @@ const PrevComments = (props) => {
                     </div>
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">
-                            <p className="PrevComments-box-NTC-Right__name">{PrevCommentsName1}</p>
-                            <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp1}</p>
+                            <p className="PrevComments-box-NTC-Right__name">{props.ActiveVideo.comments[1].name}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{props.ActiveVideo.comments[1].comment.timestamp}</p>
                         </div>
-                        <p className="PrevComments-box-NTC__comment">{PrevCommentsText1}</p>
+                        <p className="PrevComments-box-NTC__comment">{props.ActiveVideo.comments[1].comment}</p>
                     </div>
                 </div>
                 <Divider/>
@@ -70,10 +56,10 @@ const PrevComments = (props) => {
                     </div>
                     <div className="PrevComments-box-NTC-Right">
                         <div className="PrevComments-box-NTC-Right-Container">
-                            <p className="PrevComments-box-NTC-Right__name">{PrevCommentsName2}</p>
-                            <p className="PrevComments-box-NTC__timestampe">{PrevCommentsTimestamp2}</p>
+                            <p className="PrevComments-box-NTC-Right__name">{props.ActiveVideo.comments[2].name}</p>
+                            <p className="PrevComments-box-NTC__timestampe">{props.ActiveVideo.comments[2].comment.timestamp}</p>
                         </div>
-                        <p className="PrevComments-box-NTC__comment">{PrevCommentsText2}</p>
+                        <p className="PrevComments-box-NTC__comment">{props.ActiveVideo.comments[2].comment}</p>
                     </div>
                 </div>
                 <Divider/>
