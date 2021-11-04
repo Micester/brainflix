@@ -67,6 +67,7 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
            border-radius: 50%;
            width: 2.25rem;
            height: 2.25rem;
+           background-color: $Mercury;
        }
        &-mid__avatar-comments{
            display: none;
@@ -155,6 +156,7 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
             height: 2.5rem;
             margin-right: 1.5rem;
             display: inherit;
+            background-color: $Mercury;
         }
         &-bot{ //Button - Div
            width: 9.375rem;

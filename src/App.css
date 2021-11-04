@@ -115,6 +115,7 @@
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
+    background-color: #E1E1E1;
   }
   .header-mid__avatar-comments {
     display: none;
@@ -204,6 +205,7 @@
     height: 2.5rem;
     margin-right: 1.5rem;
     display: inherit;
+    background-color: #E1E1E1;
   }
   .header-bot {
     width: 9.375rem;
