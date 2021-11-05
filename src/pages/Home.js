@@ -1,39 +1,36 @@
 //Header - Avatar & Img 
-import logoSrc from '../../assets/Logo/BrainFlix-logo.svg';
-import avatarSrc from '../../assets/Images/Mohan-muruge.jpg';
+// import logoSrc from '../assets/Logo/BrainFlix-logo.svg';
+// import avatarSrc from '../assets/Images/Mohan-muruge.jpg';
+//Header -- Mobile 
+// import Header from './components/Header/Header';
 
-import VideoPlayerList from '../../components/VideoPlayer/VideoPlayerList';
+import VideoPlayerList from '../components/VideoPlayer/VideoPlayerList';
 //Hero
-import Hero from '../../components/Hero/Hero';
+import Hero from '../components/Hero/Hero';
 //Title 
-import Title from '../../components/Title/Title';
+import Title from '../components/Title/Title';
 //Author
-import Author from '../../components/Author/Author';
+import Author from '../components/Author/Author';
 //Description 
-import Desc from '../../components/Desc/Desc';
+import Desc from '../components/Desc/Desc';
 //Comments
-import Comments from '../../components/Comments/Comments';
-import AddComments from '../../components/AddComment/AddComment';
-import PrevComments from '../../components/PrevComments/PrevComments';
+import Comments from '../components/Comments/Comments';
+import AddComments from '../components/AddComment/AddComment';
+import PrevComments from '../components/PrevComments/PrevComments';
 //Divider Lines
-import Divider from '../../components/Divider/Divider';
+import Divider from '../components/Divider/Divider';
 
 
 function Home(props) {
-    console.log("HomePage props", props);
-  
-    return (
-      <div className="HomePage">
-         <>
-          {/* Header */}
-          <Header logo={logoSrc} avatar={avatarSrc} />
+  console.log("HomePage props", props);
 
-          <Switch>
-            <Route path="/" exact component={App} />
-            <Route path="/videos" exact component={App} />
-            <Route path="/videos/:id" component={App} />
-            <Route path="/videos/Upload" component={VideoUpload} />
-          </Switch>
+  return (
+    <Link to={"/videos/Home" + videos.id}>
+
+      <div className="HomePage">
+        <>
+          {/* Header
+          {/* <Header logo={logoSrc} avatar={avatarSrc} /> */}
 
           {/* Needs to update */}
           <section>
@@ -74,8 +71,8 @@ function Home(props) {
           </section>
         </>
       </div>
-    );
-  }
-  
-  export default Home;
-  
+    </Link>
+  );
+}
+
+export default Home;
