@@ -1,26 +1,28 @@
-import React from "react";
-import Header from '../components/Header/Header';
-import Button from '../components/Button/Button';
+// import { Link } from "react-router-dom";
+// import React from "react";
+// import axios from "axios";
 
-class VideoUpload extends React.Component {
+// import Header from '../components/Header/Header';
+// import Button from '../components/Button/Button';
 
-    
 
-    render() {
-        console.log("Video Page videos", this.state.albums);
-        return (
-            <div>
-                <Header/>
-                <Link to={"/videos/" + videos.id}>
-                    <Button/>
 
-                </Link>
-            </div>
+// class VideoUpload extends React.Component {
+//     render() {
+//         console.log("Video Page videos", this.state.albums);
+//         return (
+//             <div>
+//                 <Header/>
+//                 <Link to={"/VideoUpload" + videos.id}>
+//                     <Button/>
 
-        );
-    }
+//                 </Link>
+//             </div>
 
-}
+//         );
+//     }
+
+// }
 
   
-export default VideoUpload;
+// export default VideoUpload;

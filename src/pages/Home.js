@@ -1,6 +1,9 @@
+import React from "react";
+import '../App.css';
+
 //Header - Avatar & Img 
 // import logoSrc from '../assets/Logo/BrainFlix-logo.svg';
-// import avatarSrc from '../assets/Images/Mohan-muruge.jpg';
+import avatarSrc from '../assets/Images/Mohan-muruge.jpg';
 //Header -- Mobile 
 // import Header from './components/Header/Header';
 
@@ -19,23 +22,56 @@ import AddComments from '../components/AddComment/AddComment';
 import PrevComments from '../components/PrevComments/PrevComments';
 //Divider Lines
 import Divider from '../components/Divider/Divider';
+// import { render } from '@testing-library/react';
+
+// //Import Video-detail data
+import videoDetails from '../data/video-details.json';
+import ActiveVideo from '../data/video-details.json';
 
 
-function Home(props) {
-  console.log("HomePage props", props);
+// console.log(videoDetails);
+// console.log(ActiveVideo[0].image);
 
-  return (
-    <Link to={"/videos/Home" + videos.id}>
+class Home extends React.Component {
+  state = {
+    // Active Video
+    ActiveVideo: videoDetails[0],
+    albums: videoDetails,
 
+
+    // Hero Props
+    HeroList: videoDetails,
+    CommentsList: videoDetails,
+    PrevCommentsList: videoDetails,
+  };
+
+  // HandleClick is good
+  handleClick = (id) => {
+    console.log('handled click');
+    console.log(id);
+    const foundVideoId = this.state.albums.findIndex((album) => id == album.id);
+    console.log(foundVideoId);
+    this.setState({
+      ActiveVideo: this.state.albums[foundVideoId]
+    });
+  };
+  render() {
+    return (
       <div className="HomePage">
         <>
-          {/* Header
-          {/* <Header logo={logoSrc} avatar={avatarSrc} /> */}
+          {/* Header */}
+          {/* <section>
+            <Header />
+          </section> */}
 
+          {/* 
+        <Link to={"/videos/Home" + videos.id}>  */}
           {/* Needs to update */}
           <section>
             <Hero ActiveVideo={this.state.ActiveVideo} />
+            <p> this is the home page</p>
           </section>
+
 
           {/* Needs to update */}
           {/* Title/Author/Description/Comments */}
@@ -69,10 +105,12 @@ function Home(props) {
               </section>
             </div>
           </section>
+          {/* </Link> */}
         </>
       </div>
-    </Link>
-  );
+    );
+  }
+
 }
 
 export default Home;

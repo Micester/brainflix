@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import VideoUpload from './pages/VideoUpload';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import VideoUpload from './pages/VideoUpload';
 import Home from './pages/Home';
 import VideoApi from './pages/VideoApi';
 
-import React from 'react';
+// import React from 'react';
 import './App.css';
 
 //Header - Avatar & Img 
-import logoSrc from './assets/Logo/BrainFlix-logo.svg';
-import avatarSrc from './assets/Images/Mohan-muruge.jpg';
+// import logoSrc from './assets/Logo/BrainFlix-logo.svg';
+// import avatarSrc from './assets/Images/Mohan-muruge.jpg';
 
 // //Import Video-detail data
 // import videoDetails from './data/video-details.json';
@@ -39,7 +39,8 @@ import Header from './components/Header/Header';
 // console.log(videoDetails);
 // console.log(ActiveVideo[0].image);
 
-class App extends React.Component {
+// class App extends React.Component {
+function App (){
   // state = {
   //   //Active Video
   //   ActiveVideo: videoDetails[0],
@@ -105,25 +106,24 @@ class App extends React.Component {
   //   });
   // };
 
-  render() {
+  // render() {
     return (
       <Router>
         <div className="App">
           {/* Header */}
-          <Header logo={logoSrc} avatar={avatarSrc} />
+          <Header/>
 
-       
           <Switch>
-            {/* <Route path="/" exact component={VideoApi} />
-            <Route path="/videos" exact component={VideoApi} />
-            <Route path="/videos/:id" component={VideoApi} /> */}
-            <Route path="/videos/Home" component={Home} />
-            {/* <Route path="/videos/VideoUpload" component={VideoUpload} /> */}
+            <Route path="/" exact component={Home} />
+            <Route path="/home"  component={Home} /> 
+            <Route path="/videos/" component={VideoApi} />
+            <Route path="/videos/:id" component={VideoApi} />
+            {/* <Route path="/VideoUpload" component={VideoApi} />  */}
           </Switch>
         </div>
 
       </Router>
     );
-  }
+  // }
 }
 export default App;
