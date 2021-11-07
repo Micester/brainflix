@@ -6,12 +6,13 @@ import UploadVideo from "../components/UploadVideo/UploadVideo";
 
 import Divider from '../components/Divider/Divider';
 
-// const VidoesAPI = ("https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
+const VidoesAPI = ("https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
 
-const VidoesAPI = ("https://project-2-api.herokuapp.com/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
+const VideosAPID = ("https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
+// const VidoesAPI = ("https://project-2-api.herokuapp.com/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
 
 
-const VidoesAPID = ("https://project-2-api.herokuapp.com/videos/:id/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
+// const VidoesAPID = ("https://project-2-api.herokuapp.com/videos/:id/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
 
 //https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E
 
@@ -25,12 +26,13 @@ class VideoApi extends React.Component {
   componentDidMount() {
     console.log(this.props);
     this.getVideos();
+    this.getVideoById("84e96018-4022-434e-80bf-000ce4cd12b8");
   }
 
   // Gets Videos
   getVideos() {
     axios
-      .get(VidoesAPI)
+      .get("https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E")
       .then((response) => {
         this.setState({
           videos: response.data,
@@ -43,11 +45,11 @@ class VideoApi extends React.Component {
   // Get Video by Id
   getVideoById(id) {
     axios 
-    .get(`https://project-2-api.herokuapp.com/videos/${id}`)
+    .get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E`)
     .then((response) => {
-      console.log(response.data);
+      console.log("Get Videos by ID",response.data);
       this.setState({
-        ActiveVideo: response.data
+        videos: response.data
       });
     })
     .catch((error) => console.log(error));
@@ -63,7 +65,6 @@ class VideoApi extends React.Component {
       }
     }
   }
-
   
     render() {
       // console.log(this.state);
@@ -73,7 +74,7 @@ class VideoApi extends React.Component {
         <div>
           <Divider/>
           <h1>Upload Video</h1>
-          <h2>Video title: {this.state.ActiveVideo.title}</h2>
+          {/* <h2>Video title: {this.state.ActiveVideo.title}</h2> */}
           {/* short circuit, if the thing on the left is false don't output the thing on the right */}
           {false && <p>Hello World</p>}
           
