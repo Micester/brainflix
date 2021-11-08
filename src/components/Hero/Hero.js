@@ -1,9 +1,15 @@
 //Hero Image (Under-Header)
-const Hero = (props) => {
+
+
+function Hero (props)  {
+
+
+  console.log('hero', props);
+  
     return(
           //Video
           <div className="Hero">
-            <video className="Hero-Image" poster={props.ActiveVideo.image} controls></video>
+            <video className="Hero-Image" poster={props.videos.image} controls></video>
           </div>
     )
 }

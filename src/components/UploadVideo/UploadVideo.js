@@ -7,6 +7,9 @@ const UploadVideo = (props) => {
 
             {/* Enter comment and submit button*/}
             <div className="Comments__AddComment__Right">
+
+                <p className="Comments__AddComment__Right__title">VIDEO THUMBNAIL</p>
+                <img className="Comments__AddComment__img" alt="avatar" />
                 
                 <p className="Comments__AddComment__Right__title">TITLE YOUR VIDEO</p>
 

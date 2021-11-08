@@ -3,17 +3,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import UploadVideo from "../components/UploadVideo/UploadVideo";
-
 import Divider from '../components/Divider/Divider';
 
-const VidoesAPI = ("https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
-
-const VideosAPID = ("https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
-// const VidoesAPI = ("https://project-2-api.herokuapp.com/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
-
-
-// const VidoesAPID = ("https://project-2-api.herokuapp.com/videos/:id/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E");
-
+//API KEY
 //https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E
 
 class VideoApi extends React.Component {

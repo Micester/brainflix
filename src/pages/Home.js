@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import '../App.css';
 
 //Header - Avatar & Img 
@@ -25,25 +27,74 @@ import Divider from '../components/Divider/Divider';
 // import { render } from '@testing-library/react';
 
 // //Import Video-detail data
-import videoDetails from '../data/video-details.json';
-import ActiveVideo from '../data/video-details.json';
+// import videoDetails from '../data/video-details.json';
+// import ActiveVideo from '../data/video-details.json';
 
 
 // console.log(videoDetails);
 // console.log(ActiveVideo[0].image);
 
 class Home extends React.Component {
+  // state = {
+  //   // Active Video
+  //   ActiveVideo: videoDetails[0],
+  //   albums: videoDetails,
+
+
+  //   // Hero Props
+  //   HeroList: videoDetails,
+  //   CommentsList: videoDetails,
+  //   PrevCommentsList: videoDetails,
+  // };
+
   state = {
-    // Active Video
-    ActiveVideo: videoDetails[0],
-    albums: videoDetails,
-
-
-    // Hero Props
-    HeroList: videoDetails,
-    CommentsList: videoDetails,
-    PrevCommentsList: videoDetails,
+    videos: [],
+    ActiveVideo: {}
   };
+
+//   Component Did Mount
+componentDidMount() {
+  console.log(this.props);
+  this.getVideos();
+  this.getVideoById("84e96018-4022-434e-80bf-000ce4cd12b8");
+}
+
+// Gets Videos
+getVideos() {
+  axios
+    .get("https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E")
+    .then((response) => {
+      this.setState({
+        videos: response.data,
+        ActiveVideo: response.data[0]
+      });
+    })
+    .catch((error) => console.log(error));
+}
+
+// Get Video by Id
+getVideoById(id) {
+  axios 
+  .get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E`)
+  .then((response) => {
+    console.log("Get Videos by ID",response.data);
+    this.setState({
+      ActiveVideo: response.data
+    });
+  })
+  .catch((error) => console.log(error));
+}
+
+//Component Did Update
+componentDidUpdate(prevProps, prevState) {
+  const { id } = this.props.match.params; 
+
+  if (id) {
+    if (prevState.ActiveVideo.id !== id) {
+      this.getVideoById(id);
+    }
+  }
+}
 
   // HandleClick is good
   handleClick = (id) => {
@@ -68,8 +119,9 @@ class Home extends React.Component {
         <Link to={"/videos/Home" + videos.id}>  */}
           {/* Needs to update */}
           <section>
-            <Hero ActiveVideo={this.state.ActiveVideo} />
-            <p> this is the home page</p>
+            {/* <Hero ActiveVideo={this.state.ActiveVideo} /> */}
+            <Hero videos={this.state.ActiveVideo} />
+           
           </section>
 
 
@@ -78,19 +130,25 @@ class Home extends React.Component {
           <section className="About-Comments">
             <div className="About-Comments-Left">
               <section className="About">
-                <Title ActiveVideo={this.state.ActiveVideo} />
+                {/* <Title ActiveVideo={this.state.ActiveVideo} /> */}
+                <Title videos={this.state.ActiveVideo} />
                 {/* <Divider className="mobile"/> */}
-                <Author ActiveVideo={this.state.ActiveVideo} />
+                {/* <Author ActiveVideo={this.state.ActiveVideo} /> */}
+                <Author videos={this.state.ActiveVideo} />
                 <Divider />
-                <Desc ActiveVideo={this.state.ActiveVideo} />
+                {/* <Desc ActiveVideo={this.state.ActiveVideo} /> */}
+                <Desc videos={this.state.ActiveVideo} />
               </section>
 
               <section className="Comments">
-                <Comments CommentsList={this.state.CommentsList} />
+                {/* <Comments CommentsList={this.state.CommentsList} /> */}
+                <Comments videos={this.state.ActiveVideo} />
                 <AddComments avatar={avatarSrc} />
                 <Divider />
-                <PrevComments avatar={avatarSrc}
-                  ActiveVideo={this.state.ActiveVideo} />
+                {/* <PrevComments avatar={avatarSrc}
+                  ActiveVideo={this.state.ActiveVideo} /> */}
+                    <PrevComments avatar={avatarSrc}
+                  videos={this.state.ActiveVideo} />
               </section>
             </div>
 
