@@ -46,7 +46,7 @@ const PrevComments = (props) => {
                             </div>
                         </div>
                         <Divider />
-
+{/* 
                         <div className="PrevComments-box-NTC">
                             <div className="PrevComments-box-NTC-Left">
                                 <div className="PrevComments-box-NTC-Left__Avatar">
@@ -79,7 +79,7 @@ const PrevComments = (props) => {
                                 <p className="PrevComments-box-NTC__comment">{props.videos.comments[2].comment}</p>
                             </div>
                         </div>
-                        <Divider />
+                        <Divider /> */}
                     </section>
                 </section>
 

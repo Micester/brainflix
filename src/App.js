@@ -117,7 +117,7 @@ function App (){
             <Route path="/" exact component={Home} />
             <Route path="/home"  component={Home} /> 
             <Route path="/videos/" component={VideoApi} />
-            <Route path="/videos/:id" component={VideoApi} />
+            <Route path="/videos/:id" component={Home} />
             {/* <Route path="/VideoUpload" component={VideoApi} />  */}
           </Switch>
         </div>

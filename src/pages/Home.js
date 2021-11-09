@@ -100,10 +100,10 @@ componentDidUpdate(prevProps, prevState) {
   handleClick = (id) => {
     console.log('handled click');
     console.log(id);
-    const foundVideoId = this.state.albums.findIndex((album) => id == album.id);
+    const foundVideoId = this.state.videos.findIndex((album) => id == album.id);
     console.log(foundVideoId);
     this.setState({
-      ActiveVideo: this.state.albums[foundVideoId]
+      ActiveVideo: this.state.videos[foundVideoId]
     });
   };
   render() {
