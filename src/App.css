@@ -721,6 +721,9 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .NextVideos-title-link {
+    text-decoration: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .NextVideos-title {

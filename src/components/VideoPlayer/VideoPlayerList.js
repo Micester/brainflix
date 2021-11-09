@@ -1,6 +1,8 @@
 // import { Component } from'react'; 
 import  VideoPlayer from './VideoPlayer';
 import  TakeVid from '../../data/videos.json';
+import { Link } from "react-router-dom";
+
 
 function VideoPlayerList({handleClick}) {
         const ChosenVideo = TakeVid.slice(1);
@@ -9,6 +11,7 @@ function VideoPlayerList({handleClick}) {
              <p className="NextVideos-title">NEXT VIDEOS</p>
                     {ChosenVideo.map((album) => {
                             return (    
+                                <Link to="/home/" className="NextVideos-title-link">
                                     <ul className="NextVideos-Lists" key={album.id}>
                                         <VideoPlayer 
                                         id = {album.id}
@@ -19,6 +22,7 @@ function VideoPlayerList({handleClick}) {
                                         handleClick = {handleClick}
                                         />
                                     </ul>
+                                </Link>
                         );
                     })}
             </>

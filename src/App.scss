@@ -696,6 +696,9 @@ $BrainFlix-DarkBlack: #000000; //Video Player components
             background-size: contain;
             object-fit: cover;
         }
+        &-title-link{
+            text-decoration: none;
+        }
     }
 
     @include tablet{

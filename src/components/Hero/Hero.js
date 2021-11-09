@@ -1,11 +1,6 @@
 //Hero Image (Under-Header)
-
-
 function Hero (props)  {
-
-
   console.log('hero', props);
-  
     return(
           //Video
           <div className="Hero">
