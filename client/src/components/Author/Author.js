@@ -25,7 +25,7 @@ const Author = (props) => {
                   <p className="About-Author__stats__Tablet__right__views">{props.videos.views}</p>
                   <p className="About-Author__stats__Tablet__right__likes">{props.videos.likes}</p>
                 </div>
-              {/* </div> */}
+
         </section>
     )
 }

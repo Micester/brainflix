@@ -1,10 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
 import UploadVideo from "../components/UploadVideo/UploadVideo";
 import Divider from '../components/Divider/Divider';
-
 import '../components/UploadVideo/UploadVideos.css'
 
 

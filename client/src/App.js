@@ -9,12 +9,11 @@ function App (){
 
       <Router>
         <div className="App">
-          {/* Header */}
           <Header/>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/home"  component={Home} /> 
-            <Route path="/videos/" component={VideoApi} />
+            <Route path="/home"  exact component={Home} /> 
+            <Route path="/videos/" exact component={VideoApi} />
             <Route path="/videos/:id" component={Home} />
           </Switch>
         </div>

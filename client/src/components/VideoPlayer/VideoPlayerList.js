@@ -1,32 +1,33 @@
-// import { Component } from'react'; 
 import  VideoPlayer from './VideoPlayer';
-import  TakeVid from '../../data/videos.json';
 import { Link } from "react-router-dom";
 
 
-function VideoPlayerList({handleClick}) {
-        const ChosenVideo = TakeVid.slice(1);
+function VideoPlayerList ({videos, videoId}) {
+        const video = videos; 
         return(
             <>
              <p className="NextVideos-title">NEXT VIDEOS</p>
-                    {ChosenVideo.map((album) => {
-                            return (    
-                                <Link to="/home/" className="NextVideos-title-link">
-                                    <ul className="NextVideos-Lists" key={album.id}>
-                                        <VideoPlayer 
-                                        id = {album.id}
-                                        title={album.title} 
-                                        image={album.image} 
-                                        channel={album.channel} 
-                                        albumObj={album}
-                                        handleClick = {handleClick}
-                                        />
-                                    </ul>
-                                </Link>
-                        );
+                    {video.filter((data) =>
+                    data.id !== videoId)
+                    .map((data) => {
+                        return (    
+                            <Link to= {"/home/" + data.title} className="NextVideos-title-link" key={data.id}>
+                                <ul className="NextVideos-Lists">
+                                    <VideoPlayer 
+                                    id = {data.id}
+                                    title={data.title} 
+                                    image={data.image} 
+                                    channel={data.channel} 
+                                    albumObj={data}
+                                    />
+                                </ul>
+                            </Link>
+                    );
                     })}
+
             </>
         );
 }
 export default VideoPlayerList;
+
 

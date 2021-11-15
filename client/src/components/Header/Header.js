@@ -5,7 +5,6 @@ import avatarSrc from '../../assets/Images/Mohan-muruge.jpg';
 function Header(props) {
     return (
         <nav>
-            {/* <NavLink to="/home" exact> */}
             <header className="header">
                 {/* header top Logo */}
                 <Link to="/">
@@ -26,7 +25,6 @@ function Header(props) {
                 </div>
                 <div><Link to="/videos"> <img className="header-mid__avatar__tablet" src={avatarSrc} alt="avatar" /></Link></div>
             </header>
-            {/* </NavLink> */}
         </nav >
     );
 }
