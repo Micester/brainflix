@@ -1,28 +1,23 @@
-const axios = require('axios');
-const fs = require('fs'); //node file-system
+// const axios = require('axios');
+// const fs = require('fs'); //node file-system
+const { response } = require('express');
+const express = require('express');
+const videosRoutes = require('./routes/videosRoutes');
+const cors = require('cors');
 
-// const express = require('express');
-// const app = express();
-// const PORT = 
+const app = express();
+const PORT = 8080;
 
+app.use(express.json());
+app.use(cors());
+app.use(express.static('public'));
 
-console.log('hello node');
-console.log(process.argv);
+app.use('/videos', videosRoutes);
 
-axios
-    .get("https://project-2-api.herokuapp.com/videos/?api_key=%3C41455ad6-5375-402b-85af-4e0468cc04cb%3E")
-    .then((response) => {
-        // console.log(response.data);
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello, World!' });
+  });
 
-        fs.writeFile('./data/videos.json', JSON.stringify (response.data), (error) => {
-            if (error) {
-                console.log(error);
-                return;
-            }
-            console.log('file written successfully');
-        });
-    })
-
-    .catch((error) => {
-        console.log(error);
-    });
+app.listen(PORT, function() {
+    console.log(`My server is running on port ${PORT}!`)
+});
